@@ -34,6 +34,8 @@
 		185AECF720B168BB001A40EC /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECE520B168BB001A40EC /* TZLocationManager.m */; };
 		185AECF820B168BB001A40EC /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECE620B168BB001A40EC /* TZGifPhotoPreviewController.m */; };
 		185AECF920B168BB001A40EC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 185AECE820B168BB001A40EC /* README.md */; };
+		185AECFC20B2F65E001A40EC /* CHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECFB20B2F65E001A40EC /* CHTextView.m */; };
+		185AECFF20B30103001A40EC /* HouseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECFE20B30103001A40EC /* HouseModel.m */; };
 		188F4A5120B00CC400C11E45 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A4620B00CC400C11E45 /* FMDatabaseQueue.m */; };
 		188F4A5220B00CC400C11E45 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A4920B00CC400C11E45 /* FMDatabaseAdditions.m */; };
 		188F4A5320B00CC400C11E45 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A4A20B00CC400C11E45 /* FMDatabase.m */; };
@@ -115,6 +117,10 @@
 		185AECE620B168BB001A40EC /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
 		185AECE720B168BB001A40EC /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
 		185AECE820B168BB001A40EC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		185AECFA20B2F65E001A40EC /* CHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTextView.h; sourceTree = "<group>"; };
+		185AECFB20B2F65E001A40EC /* CHTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTextView.m; sourceTree = "<group>"; };
+		185AECFD20B30103001A40EC /* HouseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseModel.h; sourceTree = "<group>"; };
+		185AECFE20B30103001A40EC /* HouseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseModel.m; sourceTree = "<group>"; };
 		188F4A4520B00CC400C11E45 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		188F4A4620B00CC400C11E45 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		188F4A4720B00CC400C11E45 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -235,6 +241,8 @@
 				188F4A6720B08AEC00C11E45 /* LogInViewController.xib */,
 				188F4A6F20B10A6400C11E45 /* StudyAbroadNavigationController.h */,
 				188F4A7020B10A6400C11E45 /* StudyAbroadNavigationController.m */,
+				185AECFD20B30103001A40EC /* HouseModel.h */,
+				185AECFE20B30103001A40EC /* HouseModel.m */,
 			);
 			path = Testarray;
 			sourceTree = "<group>";
@@ -248,6 +256,8 @@
 				7CE323FD20B26A7600731F9A /* ShowCollectionViewCell.h */,
 				7CE323FE20B26A7600731F9A /* ShowCollectionViewCell.m */,
 				7CE323FF20B26A7600731F9A /* ShowCollectionViewCell.xib */,
+				185AECFA20B2F65E001A40EC /* CHTextView.h */,
+				185AECFB20B2F65E001A40EC /* CHTextView.m */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -497,6 +507,7 @@
 				181BC72220ADA31A00230A9B /* main.m in Sources */,
 				188F4A5320B00CC400C11E45 /* FMDatabase.m in Sources */,
 				188F4A7120B10A6400C11E45 /* StudyAbroadNavigationController.m in Sources */,
+				185AECFC20B2F65E001A40EC /* CHTextView.m in Sources */,
 				185AECED20B168BB001A40EC /* TZAssetModel.m in Sources */,
 				185AECF320B168BB001A40EC /* TZImageManager.m in Sources */,
 				185AECF620B168BB001A40EC /* TZImagePickerController.m in Sources */,
@@ -507,6 +518,7 @@
 				188F4A5920B00D7C00C11E45 /* CHDBTool.m in Sources */,
 				181BC71420ADA31600230A9B /* AppDelegate.m in Sources */,
 				188F4A5420B00CC400C11E45 /* FMDatabasePool.m in Sources */,
+				185AECFF20B30103001A40EC /* HouseModel.m in Sources */,
 				188F4A5520B00CC400C11E45 /* FMResultSet.m in Sources */,
 				188F4A6220B03E1F00C11E45 /* RegisterListTableViewController.m in Sources */,
 				185AECEB20B168BB001A40EC /* TZAssetCell.m in Sources */,

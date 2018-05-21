@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ShowCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic,strong) UIImage *image;
 @end

@@ -18,8 +18,8 @@
 {
     if (!_backBtn) {
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backBtn setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
-        [_backBtn setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateSelected];
+        [_backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateSelected];
         [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backBtn;
@@ -49,12 +49,12 @@
 {
     if (self.childViewControllers.count > 0) {
         
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-         //[btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [btn setTitle:@"返回" forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//         //[btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+//        [btn setTitle:@"返回" forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backBtn];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     

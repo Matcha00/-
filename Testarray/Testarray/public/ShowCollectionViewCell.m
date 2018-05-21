@@ -22,5 +22,10 @@
     [super awakeFromNib];
     // Initialization code
 }
-
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    
+    self.showImage.image = image;
+}
 @end

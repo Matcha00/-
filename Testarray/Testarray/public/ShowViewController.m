@@ -9,10 +9,14 @@
 #import "ShowViewController.h"
 #import "TZImagePickerController.h"
 #import "ShowCollectionViewCell.h"
+#import "CHTextView.h"
+#import "HouseModel.h"
 @interface ShowViewController () <UICollectionViewDelegate,UICollectionViewDataSource,TZImagePickerControllerDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *sendMessage;
+//@property (weak, nonatomic) IBOutlet UITextView *sendMessage;
+@property (weak, nonatomic) IBOutlet CHTextView *sendMessage;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
 @property (nonatomic, strong) NSMutableArray *picsArray;
+@property (nonatomic, strong) UIButton *sendButton;
 @end
 
 @implementation ShowViewController
@@ -24,20 +28,40 @@
     }
     return _picsArray;
 }
+
+- (UIButton *)sendButton
+{
+    if (!_sendButton) {
+        _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _sendButton.backgroundColor = [UIColor orangeColor];
+        [_sendButton setTitle:@"发布" forState:UIControlStateNormal];
+        [_sendButton setTintColor:[UIColor whiteColor]];
+        _sendButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        [_sendButton addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _sendButton;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = CGSizeMake(60, 60);
-    layout.minimumLineSpacing = 5;
-    layout.minimumInteritemSpacing = 5;
-    UICollectionView *collVc = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-    [collVc registerNib:[UINib nibWithNibName:@"ShowCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"show"];
-    collVc.delegate = self;
-    collVc.dataSource = self;
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+//    layout.itemSize = CGSizeMake(60, 60);
+//    layout.minimumLineSpacing = 5;
+//    layout.minimumInteritemSpacing = 5;
+//    UICollectionView *collVc = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+//    [collVc registerNib:[UINib nibWithNibName:@"ShowCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"show"];
+//    collVc.delegate = self;
+//    collVc.dataSource = self;
     
-    self.imageShow = collVc;
+    //self.imageShow = collVc;
     // Do any additional setup after loading the view from its nib.
+    
+    self.sendMessage.placeholder = @"请输入内容";
+    self.sendMessage.placeholderColor = [UIColor redColor];
+    self.imageShow.delegate = self;
+    self.imageShow.dataSource = self;
+    [self.imageShow registerNib:[UINib nibWithNibName:@"ShowCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"show"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.sendButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,9 +94,9 @@
 {
     ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"show" forIndexPath:indexPath];
     if (indexPath.row == self.picsArray.count) {
-        <#statements#>
+        //[self goTZImagePickerController];
     } else {
-        
+        cell.image = self.picsArray[indexPath.row];
     }
     
     
@@ -109,5 +133,17 @@
     
     [self.imageShow reloadData];
     
+}
+
+- (void)sendClick
+{
+    NSString *text =   self.sendMessage.text;
+    NSArray *array = self.picsArray;
+    
+    HouseModel *house = [[HouseModel alloc]init];
+    
+    house.messageHouse = text;
+    house.image = array;
+    [house save];
 }
 @end
