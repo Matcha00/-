@@ -10,7 +10,7 @@
 #import "LogInViewController.h"
 #import "UserInfo.h"
 #import "CHDBTool.h"
-
+#import "SVProgressHUD.h"
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
@@ -32,15 +32,19 @@
     
     NSString *username = self.userName.text;
     NSString *pwd = self.pwd.text;
-
+    if ([username isEqualToString:@""] || [pwd isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"用户名或密码不能为空"];
+    }
     NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",@"ch"];
     //NSArray *a = [UserInfo findAll];
     UserInfo *user = [UserInfo findFirstWithFormat:sqlUserPwd];
 
     if ([user.pwd isEqualToString:pwd]) {
         
+        [SVProgressHUD showSuccessWithStatus:@"登录成功"];
 
-
+    } else {
+        [SVProgressHUD showErrorWithStatus:@"密码错误"];
     }
     
 //    CHDBTool *chDB = [CHDBTool shareInstance];

@@ -58,6 +58,13 @@
 		188F4A8020B1119A00C11E45 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A7E20B1119A00C11E45 /* NearbyViewController.xib */; };
 		188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A8220B111AE00C11E45 /* MessageViewController.m */; };
 		188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A8320B111AE00C11E45 /* MessageViewController.xib */; };
+		7CE323F820B2637B00731F9A /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323EF20B2637B00731F9A /* SVIndefiniteAnimatedView.m */; };
+		7CE323F920B2637B00731F9A /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323F120B2637B00731F9A /* SVProgressAnimatedView.m */; };
+		7CE323FA20B2637B00731F9A /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CE323F320B2637B00731F9A /* SVProgressHUD.bundle */; };
+		7CE323FB20B2637B00731F9A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323F520B2637B00731F9A /* SVProgressHUD.m */; };
+		7CE323FC20B2637B00731F9A /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323F720B2637B00731F9A /* SVRadialGradientLayer.m */; };
+		7CE3240020B26A7600731F9A /* ShowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323FE20B26A7600731F9A /* ShowCollectionViewCell.m */; };
+		7CE3240120B26A7600731F9A /* ShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE323FF20B26A7600731F9A /* ShowCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +156,19 @@
 		188F4A8120B111AE00C11E45 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		188F4A8220B111AE00C11E45 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		188F4A8320B111AE00C11E45 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		7CE323EE20B2637B00731F9A /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		7CE323EF20B2637B00731F9A /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		7CE323F020B2637B00731F9A /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		7CE323F120B2637B00731F9A /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		7CE323F220B2637B00731F9A /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		7CE323F320B2637B00731F9A /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		7CE323F420B2637B00731F9A /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		7CE323F520B2637B00731F9A /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		7CE323F620B2637B00731F9A /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		7CE323F720B2637B00731F9A /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		7CE323FD20B26A7600731F9A /* ShowCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowCollectionViewCell.h; sourceTree = "<group>"; };
+		7CE323FE20B26A7600731F9A /* ShowCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowCollectionViewCell.m; sourceTree = "<group>"; };
+		7CE323FF20B26A7600731F9A /* ShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +201,7 @@
 		181BC71120ADA31600230A9B /* Testarray */ = {
 			isa = PBXGroup;
 			children = (
-				185AECC720B168BB001A40EC /* TZImagePickerController */,
+				7CE323E920B2562500731F9A /* lib */,
 				185AECBE20B13AA1001A40EC /* public */,
 				188F4A8920B1288C00C11E45 /* Nearby */,
 				188F4A8820B1287C00C11E45 /* Message */,
@@ -190,7 +210,6 @@
 				188F4A6C20B10A2300C11E45 /* StudyAbroadViewTabBarController.h */,
 				188F4A6D20B10A2300C11E45 /* StudyAbroadViewTabBarController.m */,
 				188F4A6A20B08B5500C11E45 /* login.jpeg */,
-				188F4A4420B00CC400C11E45 /* fmdb */,
 				181BC71220ADA31600230A9B /* AppDelegate.h */,
 				181BC71320ADA31600230A9B /* AppDelegate.m */,
 				181BC71520ADA31600230A9B /* ViewController.h */,
@@ -226,6 +245,9 @@
 				185AECC220B15A33001A40EC /* ShowViewController.h */,
 				185AECC320B15A33001A40EC /* ShowViewController.m */,
 				185AECC420B15A33001A40EC /* ShowViewController.xib */,
+				7CE323FD20B26A7600731F9A /* ShowCollectionViewCell.h */,
+				7CE323FE20B26A7600731F9A /* ShowCollectionViewCell.m */,
+				7CE323FF20B26A7600731F9A /* ShowCollectionViewCell.xib */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -344,6 +366,33 @@
 			path = Nearby;
 			sourceTree = "<group>";
 		};
+		7CE323E920B2562500731F9A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7CE323ED20B2637B00731F9A /* SVProgressHUD */,
+				185AECC720B168BB001A40EC /* TZImagePickerController */,
+				188F4A4420B00CC400C11E45 /* fmdb */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		7CE323ED20B2637B00731F9A /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7CE323EE20B2637B00731F9A /* SVIndefiniteAnimatedView.h */,
+				7CE323EF20B2637B00731F9A /* SVIndefiniteAnimatedView.m */,
+				7CE323F020B2637B00731F9A /* SVProgressAnimatedView.h */,
+				7CE323F120B2637B00731F9A /* SVProgressAnimatedView.m */,
+				7CE323F220B2637B00731F9A /* SVProgressHUD-Prefix.pch */,
+				7CE323F320B2637B00731F9A /* SVProgressHUD.bundle */,
+				7CE323F420B2637B00731F9A /* SVProgressHUD.h */,
+				7CE323F520B2637B00731F9A /* SVProgressHUD.m */,
+				7CE323F620B2637B00731F9A /* SVRadialGradientLayer.h */,
+				7CE323F720B2637B00731F9A /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +452,7 @@
 			files = (
 				181BC71F20ADA31A00230A9B /* LaunchScreen.storyboard in Resources */,
 				181BC72E20ADB73700230A9B /* RegisterViewController.storyboard in Resources */,
+				7CE323FA20B2637B00731F9A /* SVProgressHUD.bundle in Resources */,
 				188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */,
 				188F4A7B20B1112300C11E45 /* MeViewController.xib in Resources */,
 				185AECC620B15A33001A40EC /* ShowViewController.xib in Resources */,
@@ -411,6 +461,7 @@
 				188F4A6420B0855D00C11E45 /* school.jpeg in Resources */,
 				188F4A5620B00CC400C11E45 /* Info.plist in Resources */,
 				181BC71A20ADA31600230A9B /* Main.storyboard in Resources */,
+				7CE3240120B26A7600731F9A /* ShowCollectionViewCell.xib in Resources */,
 				188F4A8020B1119A00C11E45 /* NearbyViewController.xib in Resources */,
 				185AECE920B168BB001A40EC /* LICENSE in Resources */,
 				188F4A6920B08AEC00C11E45 /* LogInViewController.xib in Resources */,
@@ -430,14 +481,17 @@
 				188F4A7A20B1112300C11E45 /* MeViewController.m in Sources */,
 				188F4A6820B08AEC00C11E45 /* LogInViewController.m in Sources */,
 				185AECEC20B168BB001A40EC /* TZVideoPlayerController.m in Sources */,
+				7CE3240020B26A7600731F9A /* ShowCollectionViewCell.m in Sources */,
 				188F4A6E20B10A2300C11E45 /* StudyAbroadViewTabBarController.m in Sources */,
 				188F4A5120B00CC400C11E45 /* FMDatabaseQueue.m in Sources */,
 				181BC71720ADA31600230A9B /* ViewController.m in Sources */,
 				188F4A7F20B1119A00C11E45 /* NearbyViewController.m in Sources */,
+				7CE323FB20B2637B00731F9A /* SVProgressHUD.m in Sources */,
 				188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */,
 				185AECF720B168BB001A40EC /* TZLocationManager.m in Sources */,
 				188F4A7520B1110600C11E45 /* HomePageViewController.m in Sources */,
 				185AECF520B168BB001A40EC /* TZPhotoPreviewCell.m in Sources */,
+				7CE323F820B2637B00731F9A /* SVIndefiniteAnimatedView.m in Sources */,
 				185AECF420B168BB001A40EC /* TZPhotoPickerController.m in Sources */,
 				185AECF820B168BB001A40EC /* TZGifPhotoPreviewController.m in Sources */,
 				181BC72220ADA31A00230A9B /* main.m in Sources */,
@@ -447,6 +501,7 @@
 				185AECF320B168BB001A40EC /* TZImageManager.m in Sources */,
 				185AECF620B168BB001A40EC /* TZImagePickerController.m in Sources */,
 				188F4A5F20B037A800C11E45 /* UserInfo.m in Sources */,
+				7CE323FC20B2637B00731F9A /* SVRadialGradientLayer.m in Sources */,
 				185AECEF20B168BB001A40EC /* UIView+Layout.m in Sources */,
 				185AECF020B168BB001A40EC /* TZPhotoPreviewController.m in Sources */,
 				188F4A5920B00D7C00C11E45 /* CHDBTool.m in Sources */,
@@ -461,6 +516,7 @@
 				181BC73120ADB97800230A9B /* RegisterViewController.m in Sources */,
 				185AECEA20B168BB001A40EC /* TZImageCropManager.m in Sources */,
 				188F4A5220B00CC400C11E45 /* FMDatabaseAdditions.m in Sources */,
+				7CE323F920B2637B00731F9A /* SVProgressAnimatedView.m in Sources */,
 				188F4A5C20B0196F00C11E45 /* CHDBModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

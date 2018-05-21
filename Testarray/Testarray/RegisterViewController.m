@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "UserInfo.h"
 #import "RegisterListTableViewController.h"
+#import "SVProgressHUD.h"
 
 @interface RegisterViewController ()
 
@@ -34,10 +35,12 @@
     
 
     if ([self.vc.nameTextField.text isEqualToString:@""] || [self.vc.pwdTextField.text isEqualToString:@""] || [self.vc.tpwdTextField.text isEqualToString:@""] || [self.vc.emailTextField.text isEqualToString:@""] || [self.vc.numberTextField.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"请填写所有详细信息"];
         return;
     }
     
     if (![self.vc.pwdTextField.text isEqualToString:self.vc.tpwdTextField.text]) {
+        [SVProgressHUD showErrorWithStatus:@"两次密码不一致"];
         return;
     }
     
@@ -52,12 +55,12 @@
     user.countyr = self.vc.countyr;
     
     [user save];
-    
+    [SVProgressHUD showSuccessWithStatus:@"注册成功"];
     
     
     //NSLog(@"%@，%@，%@，%@，%@，%@",self.vc.countyr,self.vc.name,self.vc.pwd,self.vc.email,self.vc.school,self.vc.birthday);
     
-    NSLog(@"%@%@%@%@",self.vc.nameTextField.text,self.vc.countyr,self.vc.birthday,self.vc.school);
+    //NSLog(@"%@%@%@%@",self.vc.nameTextField.text,self.vc.countyr,self.vc.birthday,self.vc.school);
 }
 
 

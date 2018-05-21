@@ -8,6 +8,7 @@
 #define MaxPicsNum 9
 #import "ShowViewController.h"
 #import "TZImagePickerController.h"
+#import "ShowCollectionViewCell.h"
 @interface ShowViewController () <UICollectionViewDelegate,UICollectionViewDataSource,TZImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *sendMessage;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
@@ -31,8 +32,9 @@
     layout.minimumLineSpacing = 5;
     layout.minimumInteritemSpacing = 5;
     UICollectionView *collVc = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-    
-    
+    [collVc registerNib:[UINib nibWithNibName:@"ShowCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"show"];
+    collVc.delegate = self;
+    collVc.dataSource = self;
     
     self.imageShow = collVc;
     // Do any additional setup after loading the view from its nib.
@@ -52,6 +54,45 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark collection method
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.picsArray.count + 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"show" forIndexPath:indexPath];
+    if (indexPath.row == self.picsArray.count) {
+        <#statements#>
+    } else {
+        
+    }
+    
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == self.picsArray.count) {
+        [self goTZImagePickerController];
+    } else {
+        [self.picsArray removeObjectAtIndex:indexPath.row];
+        [self.imageShow deleteItemsAtIndexPaths:@[indexPath]];
+    }
+}
+
+
+
+
+#pragma mark private method
 - (void)goTZImagePickerController
 {
     
