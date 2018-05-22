@@ -60,6 +60,10 @@
 		188F4A8020B1119A00C11E45 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A7E20B1119A00C11E45 /* NearbyViewController.xib */; };
 		188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A8220B111AE00C11E45 /* MessageViewController.m */; };
 		188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A8320B111AE00C11E45 /* MessageViewController.xib */; };
+		7C42060220B3AD3900EC89E2 /* AllShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */; };
+		7C42060320B3AD3900EC89E2 /* AllShowTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C42060120B3AD3900EC89E2 /* AllShowTableViewController.xib */; };
+		7C42060720B3AD5300EC89E2 /* AllShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060520B3AD5300EC89E2 /* AllShowTableViewCell.m */; };
+		7C42060820B3AD5300EC89E2 /* AllShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C42060620B3AD5300EC89E2 /* AllShowTableViewCell.xib */; };
 		7CE323F820B2637B00731F9A /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323EF20B2637B00731F9A /* SVIndefiniteAnimatedView.m */; };
 		7CE323F920B2637B00731F9A /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE323F120B2637B00731F9A /* SVProgressAnimatedView.m */; };
 		7CE323FA20B2637B00731F9A /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CE323F320B2637B00731F9A /* SVProgressHUD.bundle */; };
@@ -162,6 +166,12 @@
 		188F4A8120B111AE00C11E45 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		188F4A8220B111AE00C11E45 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		188F4A8320B111AE00C11E45 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		7C4205FF20B3AD3900EC89E2 /* AllShowTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllShowTableViewController.h; sourceTree = "<group>"; };
+		7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllShowTableViewController.m; sourceTree = "<group>"; };
+		7C42060120B3AD3900EC89E2 /* AllShowTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllShowTableViewController.xib; sourceTree = "<group>"; };
+		7C42060420B3AD5300EC89E2 /* AllShowTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllShowTableViewCell.h; sourceTree = "<group>"; };
+		7C42060520B3AD5300EC89E2 /* AllShowTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllShowTableViewCell.m; sourceTree = "<group>"; };
+		7C42060620B3AD5300EC89E2 /* AllShowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllShowTableViewCell.xib; sourceTree = "<group>"; };
 		7CE323EE20B2637B00731F9A /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		7CE323EF20B2637B00731F9A /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		7CE323F020B2637B00731F9A /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -250,6 +260,9 @@
 		185AECBE20B13AA1001A40EC /* public */ = {
 			isa = PBXGroup;
 			children = (
+				7C42060420B3AD5300EC89E2 /* AllShowTableViewCell.h */,
+				7C42060520B3AD5300EC89E2 /* AllShowTableViewCell.m */,
+				7C42060620B3AD5300EC89E2 /* AllShowTableViewCell.xib */,
 				185AECC220B15A33001A40EC /* ShowViewController.h */,
 				185AECC320B15A33001A40EC /* ShowViewController.m */,
 				185AECC420B15A33001A40EC /* ShowViewController.xib */,
@@ -258,6 +271,9 @@
 				7CE323FF20B26A7600731F9A /* ShowCollectionViewCell.xib */,
 				185AECFA20B2F65E001A40EC /* CHTextView.h */,
 				185AECFB20B2F65E001A40EC /* CHTextView.m */,
+				7C4205FF20B3AD3900EC89E2 /* AllShowTableViewController.h */,
+				7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */,
+				7C42060120B3AD3900EC89E2 /* AllShowTableViewController.xib */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -470,9 +486,11 @@
 				185AECF920B168BB001A40EC /* README.md in Resources */,
 				188F4A6420B0855D00C11E45 /* school.jpeg in Resources */,
 				188F4A5620B00CC400C11E45 /* Info.plist in Resources */,
+				7C42060320B3AD3900EC89E2 /* AllShowTableViewController.xib in Resources */,
 				181BC71A20ADA31600230A9B /* Main.storyboard in Resources */,
 				7CE3240120B26A7600731F9A /* ShowCollectionViewCell.xib in Resources */,
 				188F4A8020B1119A00C11E45 /* NearbyViewController.xib in Resources */,
+				7C42060820B3AD5300EC89E2 /* AllShowTableViewCell.xib in Resources */,
 				185AECE920B168BB001A40EC /* LICENSE in Resources */,
 				188F4A6920B08AEC00C11E45 /* LogInViewController.xib in Resources */,
 				185AECF120B168BB001A40EC /* TZImagePickerController.bundle in Resources */,
@@ -498,6 +516,7 @@
 				188F4A7F20B1119A00C11E45 /* NearbyViewController.m in Sources */,
 				7CE323FB20B2637B00731F9A /* SVProgressHUD.m in Sources */,
 				188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */,
+				7C42060720B3AD5300EC89E2 /* AllShowTableViewCell.m in Sources */,
 				185AECF720B168BB001A40EC /* TZLocationManager.m in Sources */,
 				188F4A7520B1110600C11E45 /* HomePageViewController.m in Sources */,
 				185AECF520B168BB001A40EC /* TZPhotoPreviewCell.m in Sources */,
@@ -519,6 +538,7 @@
 				181BC71420ADA31600230A9B /* AppDelegate.m in Sources */,
 				188F4A5420B00CC400C11E45 /* FMDatabasePool.m in Sources */,
 				185AECFF20B30103001A40EC /* HouseModel.m in Sources */,
+				7C42060220B3AD3900EC89E2 /* AllShowTableViewController.m in Sources */,
 				188F4A5520B00CC400C11E45 /* FMResultSet.m in Sources */,
 				188F4A6220B03E1F00C11E45 /* RegisterListTableViewController.m in Sources */,
 				185AECEB20B168BB001A40EC /* TZAssetCell.m in Sources */,

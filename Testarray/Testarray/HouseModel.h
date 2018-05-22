@@ -10,5 +10,5 @@
 
 @interface HouseModel : CHDBModel
 @property (nonatomic, copy) NSString *messageHouse;
-@property (nonatomic, copy) NSArray *image;
+@property (nonatomic, copy) NSString *imageData;
 @end
