@@ -137,13 +137,20 @@
 
 - (void)sendClick
 {
-    NSString *text =   self.sendMessage.text;
-    NSArray *array = self.picsArray;
-    
+    NSString *text =  self.sendMessage.text;
     HouseModel *house = [[HouseModel alloc]init];
-    
+    NSMutableArray *picturesStr = [NSMutableArray array];
+    for (UIImage *image in self.picsArray) {
+        //上传图片压缩比例
+        NSData *data = UIImageJPEGRepresentation(image, 0.6f);
+        NSString *encodedImageStr = [NSString stringWithFormat:@"%@",[data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed]];
+           [picturesStr addObject:encodedImageStr];
+    }
+    NSString *pictStr = [picturesStr componentsJoinedByString:@","];
     house.messageHouse = text;
-    house.image = array;
+    house.imageData = pictStr;
     [house save];
+    //NSMutableArray *arr = [[pictStr componentsSeparatedByString:@","] mutableCopy];  //解析
+    //NSLog(@"%ld", arr.count);
 }
 @end
