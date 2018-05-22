@@ -1,20 +1,21 @@
 //
-//  AllShowTableViewController.m
+//  AllTwoTableViewController.m
 //  Testarray
 //
-//  Created by feirui on 2018/5/22.
+//  Created by 陈欢 on 2018/5/22.
 //  Copyright © 2018年 陈欢. All rights reserved.
 //
 
-#import "AllShowTableViewController.h"
-#import "AllShowTableViewCell.h"
+#import "AllTwoTableViewController.h"
 #import "HouseModel.h"
-@interface AllShowTableViewController ()
+#import "AllShowTableViewCell.h"
+
+@interface AllTwoTableViewController ()
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, strong) NSMutableArray *showArray;
 @end
 
-@implementation AllShowTableViewController
+@implementation AllTwoTableViewController
 - (UIButton *)sendButton
 {
     if (!_sendButton) {
@@ -27,14 +28,29 @@
     }
     return _sendButton;
 }
+
+- (NSMutableArray *)showArray
+{
+    if (!_showArray) {
+        _showArray = [[NSMutableArray alloc]init];
+    }
+    return _showArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ///HouseModel *house = [[HouseModel alloc]init];
-    
     self.showArray = [[HouseModel findAll] mutableCopy];
-    
+    HouseModel *hhhh = [[HouseModel alloc]init];
+    hhhh = self.showArray[1];
+    NSLog(@"%@",hhhh.messageHouse);
+    UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
+    self.tableView.tableFooterView = view;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.sendButton];
-    //[self.tableView registerNib:[UINib nibWithNibName:@"AllShowTableViewController" bundle:nil] forCellReuseIdentifier:@"showtable"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"AllShowTableViewCell" bundle:nil] forCellReuseIdentifier:@"showtable"];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,12 +70,11 @@
     return self.showArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //AllShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
-    //cell.house = self.showArray[indexPath.row];
-
+    AllShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    cell.house = self.showArray[indexPath.row];
     return cell;
 }
 
@@ -98,21 +113,21 @@
 }
 */
 
-
+/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    //<#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
     
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    //[self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
-
+*/
 
 /*
 #pragma mark - Navigation
@@ -125,6 +140,6 @@
 */
 - (void)sendClick
 {
-    
+    [self.tableView reloadData];
 }
 @end

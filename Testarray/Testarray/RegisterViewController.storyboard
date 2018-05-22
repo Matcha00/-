@@ -37,16 +37,41 @@
                                     <segue destination="gPG-Wj-viK" kind="embed" id="JJb-Nc-115"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留学生系统注册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJf-le-b00">
+                                <rect key="frame" x="0.0" y="30" width="375" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="d7P-IA-cZ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSH-md-CjR">
+                                <rect key="frame" x="10" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="At4-Uu-6dn"/>
+                                    <constraint firstAttribute="height" constant="40" id="m9a-Dm-VLH"/>
+                                </constraints>
+                                <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="dissBack:" destination="1aB-dZ-zqP" eventType="touchUpInside" id="INP-7h-dUy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FJf-le-b00" firstAttribute="top" secondItem="sMu-hv-Dki" secondAttribute="top" constant="10" id="66p-tL-jEe"/>
                             <constraint firstItem="qeU-UJ-dhe" firstAttribute="top" secondItem="sMu-hv-Dki" secondAttribute="top" constant="80" id="8Cw-YN-ybk"/>
                             <constraint firstItem="SVD-3C-27w" firstAttribute="leading" secondItem="sMu-hv-Dki" secondAttribute="leading" constant="30" id="FrC-Mu-eur"/>
+                            <constraint firstItem="PSH-md-CjR" firstAttribute="top" secondItem="sMu-hv-Dki" secondAttribute="top" id="GJi-vh-y9j"/>
                             <constraint firstItem="sMu-hv-Dki" firstAttribute="trailing" secondItem="qeU-UJ-dhe" secondAttribute="trailing" id="HYI-iy-faB"/>
                             <constraint firstItem="sMu-hv-Dki" firstAttribute="bottom" secondItem="SVD-3C-27w" secondAttribute="bottom" constant="80" id="HjQ-gL-9Zj"/>
                             <constraint firstItem="SVD-3C-27w" firstAttribute="top" secondItem="qeU-UJ-dhe" secondAttribute="bottom" constant="10" id="J0p-X2-Qf9"/>
+                            <constraint firstItem="sMu-hv-Dki" firstAttribute="trailing" secondItem="FJf-le-b00" secondAttribute="trailing" id="LoF-8h-DyM"/>
+                            <constraint firstItem="PSH-md-CjR" firstAttribute="leading" secondItem="sMu-hv-Dki" secondAttribute="leading" constant="10" id="POl-pQ-gco"/>
                             <constraint firstItem="qeU-UJ-dhe" firstAttribute="leading" secondItem="sMu-hv-Dki" secondAttribute="leading" id="eg5-g7-mNZ"/>
                             <constraint firstItem="sMu-hv-Dki" firstAttribute="trailing" secondItem="SVD-3C-27w" secondAttribute="trailing" constant="30" id="gR4-Zg-Z6G"/>
+                            <constraint firstItem="FJf-le-b00" firstAttribute="leading" secondItem="sMu-hv-Dki" secondAttribute="leading" id="tHf-q3-OvE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sMu-hv-Dki"/>
                     </view>
@@ -356,4 +381,7 @@
             <point key="canvasLocation" x="927" y="168"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="x" width="64" height="64"/>
+    </resources>
 </document>

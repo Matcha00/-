@@ -76,6 +76,10 @@
         //NSLog(@"%@",vc.test);
     }
 }
+- (IBAction)dissBack:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 

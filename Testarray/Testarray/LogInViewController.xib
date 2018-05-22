@@ -76,6 +76,17 @@
                         <constraint firstItem="E4Q-Hy-YHs" firstAttribute="centerX" secondItem="S9M-Ee-sDL" secondAttribute="centerX" id="r71-8e-zTo"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIA-Kr-azO">
+                    <rect key="frame" x="10" y="42" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KK1-c5-naf"/>
+                        <constraint firstAttribute="width" constant="40" id="R5V-de-sAI"/>
+                    </constraints>
+                    <state key="normal" image="x"/>
+                    <connections>
+                        <action selector="backView:" destination="-1" eventType="touchUpInside" id="LPD-8J-xca"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -83,9 +94,11 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KQg-1H-Xb4" secondAttribute="trailing" id="EVY-3P-pPu"/>
                 <constraint firstItem="KQg-1H-Xb4" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Ksf-dv-1rW"/>
                 <constraint firstItem="KQg-1H-Xb4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="SFc-nj-ZW4"/>
+                <constraint firstItem="uIA-Kr-azO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="22" id="ZOu-Ps-J6z"/>
                 <constraint firstItem="S9M-Ee-sDL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="apd-wp-JlA"/>
                 <constraint firstItem="S9M-Ee-sDL" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="hpK-vg-S3b"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="KQg-1H-Xb4" secondAttribute="bottom" id="xIw-A8-0h3"/>
+                <constraint firstItem="uIA-Kr-azO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="xKg-QY-GG3"/>
                 <constraint firstItem="S9M-Ee-sDL" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="y9f-Ew-j7Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
@@ -94,5 +107,6 @@
     </objects>
     <resources>
         <image name="login.jpeg" width="668" height="1002"/>
+        <image name="x" width="64" height="64"/>
     </resources>
 </document>

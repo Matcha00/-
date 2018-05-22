@@ -19,14 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="528" height="369.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
-                        <rect key="frame" x="0.0" y="0.0" width="528" height="70"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-zS-yZw">
-                        <rect key="frame" x="0.0" y="70" width="528" height="300"/>
+                        <rect key="frame" x="0.0" y="69" width="528" height="300"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="Eat-QN-UaL"/>
@@ -39,6 +33,12 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="69"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" id="QYH-wB-ZJv"/>
@@ -51,6 +51,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="zhengwen" destination="5iV-WE-Bat" id="1Ui-b7-7WB"/>
+            </connections>
             <point key="canvasLocation" x="50" y="27"/>
         </tableViewCell>
     </objects>

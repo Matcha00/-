@@ -7,7 +7,12 @@
 //
 
 #import "AllShowTableViewCell.h"
+#import "HouseModel.h"
+@interface AllShowTableViewCell()
 
+@property (weak, nonatomic) IBOutlet UILabel *zhengwen;
+
+@end
 @implementation AllShowTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +24,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setHouse:(HouseModel *)house
+{
+    _house = house;
+    
+    self.zhengwen.text = house.messageHouse;
 }
 
 @end

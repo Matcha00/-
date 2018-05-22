@@ -137,6 +137,10 @@
 
 - (void)sendClick
 {
+    NSUserDefaults *user = [[NSUserDefaults alloc]init];
+    
+    NSString *getUsername = [user objectForKey:@"id"];
+    
     NSString *text =  self.sendMessage.text;
     HouseModel *house = [[HouseModel alloc]init];
     NSMutableArray *picturesStr = [NSMutableArray array];
@@ -149,6 +153,7 @@
     NSString *pictStr = [picturesStr componentsJoinedByString:@","];
     house.messageHouse = text;
     house.imageData = pictStr;
+    house.userName = getUsername;
     [house save];
     //NSMutableArray *arr = [[pictStr componentsSeparatedByString:@","] mutableCopy];  //解析
     //NSLog(@"%ld", arr.count);

@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "ShowViewController.h"
+#import "AllTwoTableViewController.h"
 @interface HomePageViewController ()
 
 @end
@@ -39,5 +40,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)wupinPush:(id)sender {
+    
+    AllTwoTableViewController *allVc = [[AllTwoTableViewController alloc]init];
+    [self.navigationController pushViewController:allVc animated:YES];
+}
 
+- (IBAction)studyPush:(id)sender {
+    
+    AllTwoTableViewController *allVc = [[AllTwoTableViewController alloc]init];
+    [self.navigationController pushViewController:allVc animated:YES];
+}
 @end
