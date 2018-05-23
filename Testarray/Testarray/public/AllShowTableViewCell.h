@@ -10,4 +10,6 @@
 @class HouseModel;
 @interface AllShowTableViewCell : UITableViewCell
 @property (nonatomic, copy) HouseModel *house;
+
++ (instancetype)cell;
 @end

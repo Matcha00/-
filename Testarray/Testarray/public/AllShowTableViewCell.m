@@ -8,8 +8,10 @@
 
 #import "AllShowTableViewCell.h"
 #import "HouseModel.h"
-@interface AllShowTableViewCell()
-
+#import "AllshowCollectionViewCell.h"
+@interface AllShowTableViewCell() <UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
+@property (nonatomic, strong) NSMutableArray *imageArray;
 @property (weak, nonatomic) IBOutlet UILabel *zhengwen;
 
 @end
@@ -17,8 +19,13 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.imageShow.delegate = self;
+    self.imageShow.dataSource = self;
+    [self.imageShow registerNib:[UINib nibWithNibName:@"AllshowCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"showcollcell"];
     // Initialization code
 }
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -31,6 +38,31 @@
     _house = house;
     
     self.zhengwen.text = house.messageHouse;
+    self.imageArray = [[house.imageData componentsSeparatedByString:@","] mutableCopy];
+    
 }
 
+
+
+#pragma mark privte uicollectionview
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.imageArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    AllshowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"showcollcell" forIndexPath:indexPath];
+    cell.imageData = self.imageArray[indexPath.row];
+    return cell;
+}
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
 @end

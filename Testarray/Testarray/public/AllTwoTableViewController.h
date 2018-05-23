@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CHConst.h"
 @interface AllTwoTableViewController : UITableViewController
-
+@property (nonatomic, assign) CHTypeAll type;
 @end

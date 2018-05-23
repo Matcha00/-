@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CHConst.h"
 @interface ShowViewController : UIViewController
-
+@property (nonatomic, assign) CHTypeAll type;
 @end

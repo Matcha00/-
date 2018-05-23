@@ -8,7 +8,12 @@
 
 #import "AllTwoTableViewController.h"
 #import "HouseModel.h"
+#import "CHStudyModel.h"
+#import "CHResModel.h"
+#import "CHInternshipModel.h"
+#import "CHPartTimeJobModel.h"
 #import "AllShowTableViewCell.h"
+#import "ShowViewController.h"
 
 @interface AllTwoTableViewController ()
 @property (nonatomic, strong) UIButton *sendButton;
@@ -38,10 +43,35 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.showArray = [[HouseModel findAll] mutableCopy];
-    HouseModel *hhhh = [[HouseModel alloc]init];
-    hhhh = self.showArray[1];
-    NSLog(@"%@",hhhh.messageHouse);
+    
+    switch (self.type) {
+        case CHTypeAllHouse:
+            self.showArray = [[HouseModel findAll] mutableCopy];
+            self.navigationItem.title = @"房屋租赁";
+            break;
+        case CHTypeAllStudy:
+            self.showArray = [[CHStudyModel findAll] mutableCopy];
+            self.navigationItem.title = @"学习";
+            break;
+        case CHTypeAllWPShop:
+            self.showArray = [[CHResModel findAll]mutableCopy];
+            self.navigationItem.title = @"物品交易";
+            break;
+        case CHTypeAllJZ:
+            self.showArray = [[CHPartTimeJobModel findAll]mutableCopy];
+            break;
+            
+            
+        case CHTypeAllSX:
+            self.showArray = [[CHInternshipModel findAll]mutableCopy];
+            break;
+            
+        default:
+            break;
+    }
+    
+    //self.showArray = [[HouseModel findAll] mutableCopy];
+    
     UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
     self.tableView.tableFooterView = view;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.sendButton];
@@ -141,5 +171,8 @@
 - (void)sendClick
 {
     [self.tableView reloadData];
+    ShowViewController *show = [[ShowViewController alloc]init];
+    show.type = self.type;
+    [self.navigationController pushViewController:show animated:YES];
 }
 @end

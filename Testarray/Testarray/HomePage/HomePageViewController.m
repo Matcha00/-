@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 #import "ShowViewController.h"
 #import "AllTwoTableViewController.h"
+#import "CHConst.h"
 @interface HomePageViewController ()
 
 @end
@@ -26,9 +27,12 @@
 }
 - (IBAction)fzClick:(id)sender {
     
-    ShowViewController *show = [[ShowViewController alloc]init];
-    
-    [self.navigationController pushViewController:show animated:YES];
+//    ShowViewController *show = [[ShowViewController alloc]init];
+//
+//    [self.navigationController pushViewController:show animated:YES];
+    AllTwoTableViewController *allVc = [[AllTwoTableViewController alloc]init];
+    allVc.type = CHTypeAllHouse;
+    [self.navigationController pushViewController:allVc animated:YES];
 }
 
 /*
@@ -43,12 +47,14 @@
 - (IBAction)wupinPush:(id)sender {
     
     AllTwoTableViewController *allVc = [[AllTwoTableViewController alloc]init];
+    allVc.type = CHTypeAllWPShop;
     [self.navigationController pushViewController:allVc animated:YES];
 }
 
 - (IBAction)studyPush:(id)sender {
     
     AllTwoTableViewController *allVc = [[AllTwoTableViewController alloc]init];
+    allVc.type = CHTypeAllStudy;
     [self.navigationController pushViewController:allVc animated:YES];
 }
 @end

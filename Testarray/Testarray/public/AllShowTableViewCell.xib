@@ -34,14 +34,14 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
-                        <rect key="frame" x="0.0" y="0.0" width="528" height="69"/>
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="59"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" id="QYH-wB-ZJv"/>
+                    <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" constant="10" id="QYH-wB-ZJv"/>
                     <constraint firstAttribute="trailing" secondItem="5iV-WE-Bat" secondAttribute="trailing" id="VWf-iJ-ZVr"/>
                     <constraint firstItem="5iV-WE-Bat" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="a4p-TV-EqX"/>
                     <constraint firstItem="5iV-WE-Bat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dY7-1C-uQ0"/>
@@ -52,6 +52,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="imageShow" destination="9Yd-zS-yZw" id="v8y-0f-oGb"/>
                 <outlet property="zhengwen" destination="5iV-WE-Bat" id="1Ui-b7-7WB"/>
             </connections>
             <point key="canvasLocation" x="50" y="27"/>
