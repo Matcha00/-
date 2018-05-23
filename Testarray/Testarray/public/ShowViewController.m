@@ -167,6 +167,9 @@
         case CHTypeAllSX:
         {
             CHInternshipModel *sxModel = [[CHInternshipModel alloc]init];
+            sxModel.messageHouse = text;
+            sxModel.imageData = pictStr;
+            sxModel.userName = getUsername;
             [sxModel save];
         }
            
@@ -174,18 +177,27 @@
         case CHTypeAllJZ:
         {
             CHPartTimeJobModel *jzModel = [[CHPartTimeJobModel alloc]init];
+            jzModel.messageHouse = text;
+            jzModel.imageData = pictStr;
+            jzModel.userName = getUsername;
             [jzModel save];
         }
             break;
         case CHTypeAllStudy:
         {
             CHStudyModel *studyModel = [[CHStudyModel alloc]init];
+            studyModel.messageHouse = text;
+            studyModel.imageData = pictStr;
+            studyModel.userName = getUsername;
             [studyModel save];
         }
             break;
         case CHTypeAllWPShop:
         {
             CHResModel *resModel = [[CHResModel alloc]init];
+            resModel.messageHouse = text;
+            resModel.imageData = pictStr;
+            resModel.userName = getUsername;
             [resModel save];
             
         }
