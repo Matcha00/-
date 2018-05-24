@@ -17,6 +17,9 @@
 		181BC73120ADB97800230A9B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181BC73020ADB97800230A9B /* RegisterViewController.m */; };
 		1843456320B45BDC004ECBCE /* AllTwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456120B45BDC004ECBCE /* AllTwoTableViewController.m */; };
 		1843456420B45BDC004ECBCE /* AllTwoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843456220B45BDC004ECBCE /* AllTwoTableViewController.xib */; };
+		1843456820B70364004ECBCE /* AllShowPushTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456620B70364004ECBCE /* AllShowPushTableViewCell.m */; };
+		1843456920B70364004ECBCE /* AllShowPushTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843456720B70364004ECBCE /* AllShowPushTableViewCell.xib */; };
+		1843456C20B70602004ECBCE /* CHCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456B20B70602004ECBCE /* CHCommentModel.m */; };
 		185AECC520B15A33001A40EC /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECC320B15A33001A40EC /* ShowViewController.m */; };
 		185AECC620B15A33001A40EC /* ShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AECC420B15A33001A40EC /* ShowViewController.xib */; };
 		185AECE920B168BB001A40EC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 185AECC820B168BB001A40EC /* LICENSE */; };
@@ -100,6 +103,11 @@
 		1843456020B45BDC004ECBCE /* AllTwoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllTwoTableViewController.h; sourceTree = "<group>"; };
 		1843456120B45BDC004ECBCE /* AllTwoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllTwoTableViewController.m; sourceTree = "<group>"; };
 		1843456220B45BDC004ECBCE /* AllTwoTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTwoTableViewController.xib; sourceTree = "<group>"; };
+		1843456520B70364004ECBCE /* AllShowPushTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllShowPushTableViewCell.h; sourceTree = "<group>"; };
+		1843456620B70364004ECBCE /* AllShowPushTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllShowPushTableViewCell.m; sourceTree = "<group>"; };
+		1843456720B70364004ECBCE /* AllShowPushTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllShowPushTableViewCell.xib; sourceTree = "<group>"; };
+		1843456A20B70602004ECBCE /* CHCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCommentModel.h; sourceTree = "<group>"; };
+		1843456B20B70602004ECBCE /* CHCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCommentModel.m; sourceTree = "<group>"; };
 		185AECC220B15A33001A40EC /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		185AECC320B15A33001A40EC /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		185AECC420B15A33001A40EC /* ShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowViewController.xib; sourceTree = "<group>"; };
@@ -291,6 +299,8 @@
 				7C42061420B4FFE600EC89E2 /* CHInternshipModel.m */,
 				7C42061620B5005800EC89E2 /* CHPartTimeJobModel.h */,
 				7C42061720B5005800EC89E2 /* CHPartTimeJobModel.m */,
+				1843456A20B70602004ECBCE /* CHCommentModel.h */,
+				1843456B20B70602004ECBCE /* CHCommentModel.m */,
 			);
 			path = Testarray;
 			sourceTree = "<group>";
@@ -320,6 +330,9 @@
 				7C42062320B53BD800EC89E2 /* AllShowPushViewController.h */,
 				7C42062420B53BD800EC89E2 /* AllShowPushViewController.m */,
 				7C42062520B53BD800EC89E2 /* AllShowPushViewController.xib */,
+				1843456520B70364004ECBCE /* AllShowPushTableViewCell.h */,
+				1843456620B70364004ECBCE /* AllShowPushTableViewCell.m */,
+				1843456720B70364004ECBCE /* AllShowPushTableViewCell.xib */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -525,6 +538,7 @@
 				181BC71F20ADA31A00230A9B /* LaunchScreen.storyboard in Resources */,
 				181BC72E20ADB73700230A9B /* RegisterViewController.storyboard in Resources */,
 				7CE323FA20B2637B00731F9A /* SVProgressHUD.bundle in Resources */,
+				1843456920B70364004ECBCE /* AllShowPushTableViewCell.xib in Resources */,
 				1843456420B45BDC004ECBCE /* AllTwoTableViewController.xib in Resources */,
 				188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */,
 				188F4A7B20B1112300C11E45 /* MeViewController.xib in Resources */,
@@ -562,6 +576,7 @@
 				188F4A5120B00CC400C11E45 /* FMDatabaseQueue.m in Sources */,
 				7C42060F20B4FEFA00EC89E2 /* CHStudyModel.m in Sources */,
 				181BC71720ADA31600230A9B /* ViewController.m in Sources */,
+				1843456820B70364004ECBCE /* AllShowPushTableViewCell.m in Sources */,
 				188F4A7F20B1119A00C11E45 /* NearbyViewController.m in Sources */,
 				7CE323FB20B2637B00731F9A /* SVProgressHUD.m in Sources */,
 				188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */,
@@ -581,6 +596,7 @@
 				185AECFC20B2F65E001A40EC /* CHTextView.m in Sources */,
 				185AECED20B168BB001A40EC /* TZAssetModel.m in Sources */,
 				185AECF320B168BB001A40EC /* TZImageManager.m in Sources */,
+				1843456C20B70602004ECBCE /* CHCommentModel.m in Sources */,
 				185AECF620B168BB001A40EC /* TZImagePickerController.m in Sources */,
 				188F4A5F20B037A800C11E45 /* UserInfo.m in Sources */,
 				7CE323FC20B2637B00731F9A /* SVRadialGradientLayer.m in Sources */,

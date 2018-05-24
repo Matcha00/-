@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class HouseModel;
 @interface AllShowPushViewController : UIViewController
-@property (nonatomic, copy) HouseModel *model;
+@property (nonatomic, strong) HouseModel *model;
 @end

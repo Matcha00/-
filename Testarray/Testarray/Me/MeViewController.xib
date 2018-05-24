@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeViewController">
             <connections>
+                <outlet property="headerImage" destination="J3D-7m-oCd" id="PgK-dW-LS9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3D-7m-oCd">
+                    <rect key="frame" x="157" y="150" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="i8V-ug-5jO"/>
+                        <constraint firstAttribute="height" constant="60" id="m8V-NJ-tKy"/>
+                    </constraints>
+                    <state key="normal" image="me"/>
+                    <connections>
+                        <action selector="headerImage:" destination="-1" eventType="touchUpInside" id="E5X-CW-vy2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwC-Si-Nxv">
+                    <rect key="frame" x="20" y="324" width="335" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3U5-HU-NvW"/>
+                    </constraints>
+                    <state key="normal" title="个人资料"/>
+                    <connections>
+                        <action selector="personMessageClick:" destination="-1" eventType="touchUpInside" id="eNO-YX-xZl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bch-WG-PAi">
+                    <rect key="frame" x="20" y="374" width="335" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="skz-A2-93O"/>
+                    </constraints>
+                    <state key="normal" title="退出登录"/>
+                    <connections>
+                        <action selector="logoutClick:" destination="-1" eventType="touchUpInside" id="C6c-47-bGi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-up-D7P">
+                    <rect key="frame" x="20" y="274" width="335" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Z30-rG-wi2"/>
+                    </constraints>
+                    <state key="normal" title="我的收藏"/>
+                    <connections>
+                        <action selector="likeClic:" destination="-1" eventType="touchUpInside" id="e7m-xs-A6H"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kwC-Si-Nxv" firstAttribute="top" secondItem="mCh-up-D7P" secondAttribute="bottom" constant="20" id="781-pZ-JDo"/>
+                <constraint firstItem="mCh-up-D7P" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="B0N-AS-vuc"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mCh-up-D7P" secondAttribute="trailing" constant="20" id="EHP-mn-Fb8"/>
+                <constraint firstItem="kwC-Si-Nxv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="Pe5-z1-NEt"/>
+                <constraint firstItem="J3D-7m-oCd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R5H-DY-cEE"/>
+                <constraint firstItem="mCh-up-D7P" firstAttribute="top" secondItem="J3D-7m-oCd" secondAttribute="bottom" constant="64" id="Xdz-T6-QuU"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bch-WG-PAi" secondAttribute="trailing" constant="20" id="auI-5f-COn"/>
+                <constraint firstItem="bch-WG-PAi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="faE-Qv-Wk1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kwC-Si-Nxv" secondAttribute="trailing" constant="20" id="i3L-73-VQ8"/>
+                <constraint firstItem="bch-WG-PAi" firstAttribute="top" secondItem="kwC-Si-Nxv" secondAttribute="bottom" constant="20" id="qFy-4L-JN6"/>
+                <constraint firstItem="J3D-7m-oCd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="130" id="qtt-wJ-dYl"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.5" y="91.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="me" width="32" height="32"/>
+    </resources>
 </document>

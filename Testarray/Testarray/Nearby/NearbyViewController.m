@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, strong) NSMutableArray *showarray;
 @property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) UIButton *leftButton;
 @end
 
 @implementation NearbyViewController
@@ -36,6 +37,20 @@
     
 }
 
+- (UIButton *)leftButton
+{
+    if (!_leftButton) {
+        _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _leftButton.backgroundColor = [UIColor orangeColor];
+        [_leftButton setTitle:@"桂林市" forState:UIControlStateNormal];
+        [_leftButton setTintColor:[UIColor whiteColor]];
+        _leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        //[_sendButton addTarget:self action:@selector(sendClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return  _leftButton;
+}
+
 - (NSMutableArray *)showarray
 {
     if (!_showarray) {
@@ -50,10 +65,12 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
     self.nearbyTableView.tableFooterView = view;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.sendButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.leftButton];
     [self.nearbyTableView registerNib:[UINib nibWithNibName:@"AllShowTableViewCell" bundle:nil] forCellReuseIdentifier:@"showtable"];
     self.type = self.changType.selectedSegmentIndex;
     self.showarray = [[CHInternshipModel findAll]mutableCopy];
     [self.changType addTarget:self action:@selector(changTypeClick:) forControlEvents:UIControlEventValueChanged];
+    
     // Do any additional setup after loading the view from its nib.
 }
 

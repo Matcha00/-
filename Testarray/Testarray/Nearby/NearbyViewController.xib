@@ -23,11 +23,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d4J-7G-p4W">
-                    <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                    <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jE0-iP-pWf">
-                    <rect key="frame" x="0.0" y="60" width="375" height="29"/>
+                    <rect key="frame" x="0.0" y="30" width="375" height="29"/>
                     <segments>
                         <segment title="实习"/>
                         <segment title="兼职"/>
@@ -37,9 +37,9 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="d4J-7G-p4W" secondAttribute="trailing" id="Emv-cP-l08"/>
-                <constraint firstItem="jE0-iP-pWf" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="Jdp-uM-EFB"/>
+                <constraint firstItem="jE0-iP-pWf" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="Jdp-uM-EFB"/>
                 <constraint firstItem="d4J-7G-p4W" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="PAJ-nX-zlY"/>
-                <constraint firstItem="d4J-7G-p4W" firstAttribute="top" secondItem="jE0-iP-pWf" secondAttribute="bottom" id="cYb-x7-Y1F"/>
+                <constraint firstItem="d4J-7G-p4W" firstAttribute="top" secondItem="jE0-iP-pWf" secondAttribute="bottom" constant="10" id="cYb-x7-Y1F"/>
                 <constraint firstItem="jE0-iP-pWf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="eMJ-FC-ixl"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jE0-iP-pWf" secondAttribute="trailing" id="tZp-XQ-gzT"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="d4J-7G-p4W" secondAttribute="bottom" id="xZz-2D-c54"/>
