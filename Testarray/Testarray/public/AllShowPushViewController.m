@@ -33,7 +33,7 @@
 {
     UIView *header = [[UIView alloc]init];
     AllShowTableViewCell *cell = [AllShowTableViewCell cell];
-    
+    cell.house = self.model;
     [header addSubview:cell];
     
     self.commentTableView.tableHeaderView = header;

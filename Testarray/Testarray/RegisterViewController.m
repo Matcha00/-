@@ -21,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    
+    //将触摸事件添加到当前view
+    [self.view addGestureRecognizer:tapGestureRecognizer];
     // Do any additional setup after loading the view.
 }
 
@@ -80,7 +85,23 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.vc.nameTextField resignFirstResponder];
+    [self.vc.pwdTextField resignFirstResponder];
+    [self.vc.tpwdTextField resignFirstResponder];
+    [self.vc.emailTextField resignFirstResponder];
+    [self.vc.numberTextField resignFirstResponder];
+    
+}
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.vc.nameTextField resignFirstResponder];
+    [self.vc.pwdTextField resignFirstResponder];
+    [self.vc.tpwdTextField resignFirstResponder];
+    [self.vc.emailTextField resignFirstResponder];
+    [self.vc.numberTextField resignFirstResponder];
+    [self.vc.view endEditing:YES];
+}
 
 @end

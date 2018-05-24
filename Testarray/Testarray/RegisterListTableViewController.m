@@ -53,7 +53,7 @@
     NSString *monStr =[self.monthArray objectAtIndex:0];
     
     self.birthday = [NSString stringWithFormat:@"%@%@",dateStr,monStr];
-    
+   
     
 }
 
@@ -190,4 +190,5 @@
 //{
 //
 //}
+
 @end
