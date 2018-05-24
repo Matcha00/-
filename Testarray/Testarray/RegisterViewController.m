@@ -23,6 +23,7 @@
     [super viewDidLoad];
      UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     tapGestureRecognizer.cancelsTouchesInView = NO;
+    tapGestureRecognizer.numberOfTapsRequired = 1;
     
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];

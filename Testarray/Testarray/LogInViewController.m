@@ -37,7 +37,7 @@
     if ([username isEqualToString:@""] || [pwd isEqualToString:@""]) {
         [SVProgressHUD showErrorWithStatus:@"用户名或密码不能为空"];
     }
-    NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",@"ch"];
+    NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",username];
     //NSArray *a = [UserInfo findAll];
     UserInfo *user = [UserInfo findFirstWithFormat:sqlUserPwd];
 
@@ -55,9 +55,10 @@
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             
            
-             StudyAbroadViewTabBarController *tabViewController = (StudyAbroadViewTabBarController *) appDelegate.window.rootViewController;
+            StudyAbroadViewTabBarController *tabViewController = [[StudyAbroadViewTabBarController alloc]init];
+            appDelegate.window.rootViewController = tabViewController ;
             
-            [tabViewController setSelectedIndex:0];
+            //[tabViewController setSelectedIndex:0];
             
         }];
 
@@ -96,5 +97,8 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 @end

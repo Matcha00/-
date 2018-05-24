@@ -49,7 +49,6 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="logInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dm-ML-pTu"/>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVy-QE-Wqq"/>
                                         </connections>
                                     </button>

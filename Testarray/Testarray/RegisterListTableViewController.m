@@ -53,7 +53,12 @@
     NSString *monStr =[self.monthArray objectAtIndex:0];
     
     self.birthday = [NSString stringWithFormat:@"%@%@",dateStr,monStr];
-   
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    //tapGestureRecognizer.cancelsTouchesInView = NO;
+    
+    //将触摸事件添加到当前view
+    [self.tableView addGestureRecognizer:tapGestureRecognizer];
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     
 }
 
@@ -190,5 +195,13 @@
 //{
 //
 //}
-
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.nameTextField resignFirstResponder];
+    [self.pwdTextField resignFirstResponder];
+    [self.tpwdTextField resignFirstResponder];
+    [self.emailTextField resignFirstResponder];
+    [self.numberTextField resignFirstResponder];
+    [self.tableView endEditing:YES];
+    
+}
 @end
