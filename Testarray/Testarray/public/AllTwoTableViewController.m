@@ -172,4 +172,37 @@
     show.type = self.type;
     [self.navigationController pushViewController:show animated:YES];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    switch (self.type) {
+        case CHTypeAllHouse:
+            self.showArray = [[HouseModel findAll] mutableCopy];
+            self.navigationItem.title = @"房屋租赁";
+            break;
+        case CHTypeAllStudy:
+            self.showArray = [[CHStudyModel findAll] mutableCopy];
+            self.navigationItem.title = @"学习";
+            break;
+        case CHTypeAllWPShop:
+            self.showArray = [[CHResModel findAll]mutableCopy];
+            self.navigationItem.title = @"物品交易";
+            break;
+        case CHTypeAllJZ:
+            self.showArray = [[CHPartTimeJobModel findAll]mutableCopy];
+            break;
+            
+            
+        case CHTypeAllSX:
+            self.showArray = [[CHInternshipModel findAll]mutableCopy];
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self.tableView reloadData];
+}
 @end
