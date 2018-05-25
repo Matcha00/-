@@ -32,7 +32,7 @@
         
     } else {
         
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
         
         ViewController *vc = [story instantiateViewControllerWithIdentifier:@"hhhh"];
         //ViewController *view = [[ViewController alloc]init];

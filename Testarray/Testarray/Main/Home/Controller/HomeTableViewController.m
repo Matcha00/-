@@ -116,7 +116,13 @@ static NSString *const kCellID = @"MessageCellID";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MessageItem *item = self.msgMuArray[indexPath.row];
-    [self performSegueWithIdentifier:@"PushToDetailMsgVC" sender:item];
+    
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    DetailMsgViewController *vc = [story instantiateViewControllerWithIdentifier:@"oo"];
+    vc.msgItem = item;
+    [self.navigationController pushViewController:vc animated:YES];
+    //[self performSegueWithIdentifier:@"PushToDetailMsgVC" sender:item];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -133,11 +139,11 @@ static NSString *const kCellID = @"MessageCellID";
     }   
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"PushToDetailMsgVC"]) {
-        DetailMsgViewController *detailVC = (DetailMsgViewController *)segue.destinationViewController;
-        detailVC.msgItem = sender;
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"PushToDetailMsgVC"]) {
+//        DetailMsgViewController *detailVC = (DetailMsgViewController *)segue.destinationViewController;
+//        detailVC.msgItem = sender;
+//    }
+//}
 
 @end

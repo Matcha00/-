@@ -44,7 +44,7 @@
         [userDe removeObjectForKey:@"id"];
         [userDe setBool:NO forKey:@"isLogin"];
         [userDe synchronize];
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
         
         ViewController *vc = [story instantiateViewControllerWithIdentifier:@"hhhh"];
         

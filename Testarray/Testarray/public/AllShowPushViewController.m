@@ -133,6 +133,8 @@
         return NO;
     }
     if ([comment save]) {
+        textField.text = @"";
+        self.commentArray = [[CHCommentModel findAll] mutableCopy];
         [self.commentTableView reloadData];
     }
     

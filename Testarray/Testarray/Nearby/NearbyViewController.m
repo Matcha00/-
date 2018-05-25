@@ -12,6 +12,7 @@
 #import "CHInternshipModel.h"
 #import "CHPartTimeJobModel.h"
 #import "CHConst.h"
+#import "AllShowPushViewController.h"
 @interface NearbyViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *nearbyTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *changType;
@@ -94,6 +95,14 @@
     cell.house = self.showarray[indexPath.row];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AllShowPushViewController *vc = [[AllShowPushViewController alloc]init];
+    
+    vc.model = self.showarray[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)sendClick
 {
    // [self.tableView reloadData];
@@ -130,5 +139,11 @@
         default:
             break;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.nearbyTableView reloadData];
 }
 @end

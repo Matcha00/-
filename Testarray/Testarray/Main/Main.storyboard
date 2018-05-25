@@ -43,9 +43,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="微信" id="BQj-Zi-8oT"/>
-                    <connections>
-                        <segue destination="Z6c-MU-Kgc" kind="show" identifier="PushToDetailMsgVC" id="U31-L8-fc1"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhJ-i1-0FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +51,7 @@
         <!--Detail Msg View Controller-->
         <scene sceneID="5hf-H6-bH4">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Z6c-MU-Kgc" customClass="DetailMsgViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="oo" hidesBottomBarWhenPushed="YES" id="Z6c-MU-Kgc" customClass="DetailMsgViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6oj-wp-Atu"/>
                         <viewControllerLayoutGuide type="bottom" id="3hj-hD-jNr"/>
@@ -64,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-s6-J5o">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Z6c-MU-Kgc" id="kjJ-S9-Ysj"/>
