@@ -11,6 +11,10 @@
 #import "ShowCollectionViewCell.h"
 #import "CHTextView.h"
 #import "HouseModel.h"
+#import "CHStudyModel.h"
+#import "CHResModel.h"
+#import "CHInternshipModel.h"
+#import "CHPartTimeJobModel.h"
 @interface ShowViewController () <UICollectionViewDelegate,UICollectionViewDataSource,TZImagePickerControllerDelegate>
 //@property (weak, nonatomic) IBOutlet UITextView *sendMessage;
 @property (weak, nonatomic) IBOutlet CHTextView *sendMessage;
@@ -137,19 +141,82 @@
 
 - (void)sendClick
 {
-    NSString *text =  self.sendMessage.text;
-    HouseModel *house = [[HouseModel alloc]init];
+    NSUserDefaults *user = [[NSUserDefaults alloc]init];
+    
+    NSString *getUsername = [user objectForKey:@"id"];
     NSMutableArray *picturesStr = [NSMutableArray array];
+    NSString *text =  self.sendMessage.text;
     for (UIImage *image in self.picsArray) {
         //上传图片压缩比例
         NSData *data = UIImageJPEGRepresentation(image, 0.6f);
         NSString *encodedImageStr = [NSString stringWithFormat:@"%@",[data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed]];
-           [picturesStr addObject:encodedImageStr];
+        [picturesStr addObject:encodedImageStr];
     }
+    
     NSString *pictStr = [picturesStr componentsJoinedByString:@","];
-    house.messageHouse = text;
-    house.imageData = pictStr;
-    [house save];
+    switch (self.type) {
+        case CHTypeAllHouse:
+        {
+            HouseModel *house = [[HouseModel alloc]init];
+            house.messageHouse = text;
+            house.imageData = pictStr;
+            house.userName = getUsername;
+            [house save];
+        }
+            break;
+        case CHTypeAllSX:
+        {
+            CHInternshipModel *sxModel = [[CHInternshipModel alloc]init];
+            sxModel.messageHouse = text;
+            sxModel.imageData = pictStr;
+            sxModel.userName = getUsername;
+            [sxModel save];
+        }
+           
+            break;
+        case CHTypeAllJZ:
+        {
+            CHPartTimeJobModel *jzModel = [[CHPartTimeJobModel alloc]init];
+            jzModel.messageHouse = text;
+            jzModel.imageData = pictStr;
+            jzModel.userName = getUsername;
+            [jzModel save];
+        }
+            break;
+        case CHTypeAllStudy:
+        {
+            CHStudyModel *studyModel = [[CHStudyModel alloc]init];
+            studyModel.messageHouse = text;
+            studyModel.imageData = pictStr;
+            studyModel.userName = getUsername;
+            [studyModel save];
+        }
+            break;
+        case CHTypeAllWPShop:
+        {
+            CHResModel *resModel = [[CHResModel alloc]init];
+            resModel.messageHouse = text;
+            resModel.imageData = pictStr;
+            resModel.userName = getUsername;
+            [resModel save];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+//    HouseModel *house = [[HouseModel alloc]init];
+//
+//
+//
+//    house.messageHouse = text;
+//    house.imageData = pictStr;
+//    house.userName = getUsername;
+//    [house save];
     //NSMutableArray *arr = [[pictStr componentsSeparatedByString:@","] mutableCopy];  //解析
     //NSLog(@"%ld", arr.count);
 }

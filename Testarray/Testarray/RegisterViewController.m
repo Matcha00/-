@@ -21,6 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    
+    //将触摸事件添加到当前view
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+    
+    if (self.isEdit) {
+        NSUserDefaults *user = [[NSUserDefaults alloc]init];
+        
+        NSString *getUsername = [user objectForKey:@"id"];
+        
+        NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",getUsername];
+        //NSArray *a = [UserInfo findAll];
+        UserInfo *getuser = [UserInfo findFirstWithFormat:sqlUserPwd];
+        
+        
+        
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -56,7 +75,7 @@
     
     [user save];
     [SVProgressHUD showSuccessWithStatus:@"注册成功"];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     //NSLog(@"%@，%@，%@，%@，%@，%@",self.vc.countyr,self.vc.name,self.vc.pwd,self.vc.email,self.vc.school,self.vc.birthday);
     
@@ -76,7 +95,27 @@
         //NSLog(@"%@",vc.test);
     }
 }
+- (IBAction)dissBack:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.vc.nameTextField resignFirstResponder];
+    [self.vc.pwdTextField resignFirstResponder];
+    [self.vc.tpwdTextField resignFirstResponder];
+    [self.vc.emailTextField resignFirstResponder];
+    [self.vc.numberTextField resignFirstResponder];
+    
+}
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.vc.nameTextField resignFirstResponder];
+    [self.vc.pwdTextField resignFirstResponder];
+    [self.vc.tpwdTextField resignFirstResponder];
+    [self.vc.emailTextField resignFirstResponder];
+    [self.vc.numberTextField resignFirstResponder];
+    [self.vc.view endEditing:YES];
+}
 
 @end

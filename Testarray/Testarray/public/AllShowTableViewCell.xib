@@ -20,16 +20,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
-                        <rect key="frame" x="0.0" y="0.0" width="528" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="159"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-Wk-2hq">
+                        <rect key="frame" x="468" y="40" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="RUH-hp-sIR"/>
+                            <constraint firstAttribute="height" constant="40" id="p9L-Tm-B8Y"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="sc"/>
+                        <connections>
+                            <action selector="sc:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kah-sB-njh"/>
+                        </connections>
+                    </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-zS-yZw">
-                        <rect key="frame" x="0.0" y="70" width="528" height="300"/>
+                        <rect key="frame" x="0.0" y="169" width="528" height="200"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="Eat-QN-UaL"/>
+                            <constraint firstAttribute="height" constant="200" id="Eat-QN-UaL"/>
                         </constraints>
                         <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vka-52-Y53">
@@ -41,17 +52,26 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" id="QYH-wB-ZJv"/>
+                    <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" constant="10" id="QYH-wB-ZJv"/>
                     <constraint firstAttribute="trailing" secondItem="5iV-WE-Bat" secondAttribute="trailing" id="VWf-iJ-ZVr"/>
                     <constraint firstItem="5iV-WE-Bat" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="a4p-TV-EqX"/>
                     <constraint firstItem="5iV-WE-Bat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dY7-1C-uQ0"/>
                     <constraint firstAttribute="trailing" secondItem="9Yd-zS-yZw" secondAttribute="trailing" id="eLt-u5-kqs"/>
                     <constraint firstItem="9Yd-zS-yZw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="edd-pm-ues"/>
                     <constraint firstAttribute="bottom" secondItem="9Yd-zS-yZw" secondAttribute="bottom" id="hBm-Xa-uDQ"/>
+                    <constraint firstItem="vIk-Wk-2hq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="kdM-xt-SDc"/>
+                    <constraint firstAttribute="trailing" secondItem="vIk-Wk-2hq" secondAttribute="trailing" constant="20" id="unz-j6-Lwf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="50" y="27"/>
+            <connections>
+                <outlet property="imageShow" destination="9Yd-zS-yZw" id="v8y-0f-oGb"/>
+                <outlet property="zhengwen" destination="5iV-WE-Bat" id="1Ui-b7-7WB"/>
+            </connections>
+            <point key="canvasLocation" x="-41" y="-1"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="sc" width="64" height="64"/>
+    </resources>
 </document>

@@ -11,6 +11,8 @@
 #import "UserInfo.h"
 #import "CHDBTool.h"
 #import "SVProgressHUD.h"
+#import "AppDelegate.h"
+#import "StudyAbroadViewTabBarController.h"
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
@@ -35,13 +37,30 @@
     if ([username isEqualToString:@""] || [pwd isEqualToString:@""]) {
         [SVProgressHUD showErrorWithStatus:@"用户名或密码不能为空"];
     }
-    NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",@"ch"];
+    NSString *sqlUserPwd = [NSString stringWithFormat:@"WHERE %@='%@'",@"name",username];
     //NSArray *a = [UserInfo findAll];
     UserInfo *user = [UserInfo findFirstWithFormat:sqlUserPwd];
 
     if ([user.pwd isEqualToString:pwd]) {
         
         [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+        NSUserDefaults *userDe = [[NSUserDefaults alloc]init];
+        [userDe setObject:user.name forKey:@"id"];
+        [userDe setBool:YES forKey:@"isLogin"];
+        [userDe synchronize];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+            // 这是从一个模态出来的页面跳到tabbar的某一个页面
+            
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            
+           
+            StudyAbroadViewTabBarController *tabViewController = [[StudyAbroadViewTabBarController alloc]init];
+            appDelegate.window.rootViewController = tabViewController ;
+            
+            //[tabViewController setSelectedIndex:0];
+            
+        }];
 
     } else {
         [SVProgressHUD showErrorWithStatus:@"密码错误"];
@@ -64,6 +83,10 @@
     
     
 }
+- (IBAction)backView:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation
@@ -74,5 +97,8 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 @end

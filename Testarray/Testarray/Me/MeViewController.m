@@ -7,8 +7,14 @@
 //
 
 #import "MeViewController.h"
-
-@interface MeViewController ()
+#import "TZImagePickerController.h"
+#import "ViewController.h"
+#import "AppDelegate.h"
+#import "RegisterViewController.h"
+#import "EditViewController.h"
+#import "MeCollectTableViewController.h"
+@interface MeViewController () <TZImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *headerImage;
 
 @end
 
@@ -23,6 +29,56 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)headerImage:(id)sender {
+    [self goTZImagePickerController];
+}
+- (IBAction)likeClic:(id)sender {
+    
+    MeCollectTableViewController *vc = [[MeCollectTableViewController alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)personMessageClick:(id)sender {
+    
+    EditViewController *vc = [[EditViewController alloc]init];
+   
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
+}
+- (IBAction)logoutClick:(id)sender {
+    
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否退出登录" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *logout = [UIAlertAction actionWithTitle:@"退出登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSUserDefaults *userDe = [[NSUserDefaults alloc]init];
+        [userDe removeObjectForKey:@"id"];
+        [userDe setBool:NO forKey:@"isLogin"];
+        [userDe synchronize];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
+        
+        ViewController *vc = [story instantiateViewControllerWithIdentifier:@"hhhh"];
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        
+        
+        appDelegate.window.rootViewController = vc ;
+        
+    }];
+    
+    UIAlertAction *qx = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alert addAction:logout];
+    [alert addAction:qx];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 /*
 #pragma mark - Navigation
@@ -33,5 +89,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)goTZImagePickerController
+{
+    
+    TZImagePickerController*pickerVC = [[TZImagePickerController alloc]initWithMaxImagesCount:1 delegate:self];
+    pickerVC.allowPickingVideo = NO;
+    pickerVC.allowPickingOriginalPhoto = NO;//待商榷;
+    [self presentViewController:pickerVC animated:YES completion:nil];
+    
+}
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto;
+{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self.headerImage setImage:photos[0] forState:UIControlStateNormal];
+        
+    });
+    
+    
+    
+}
+
 
 @end

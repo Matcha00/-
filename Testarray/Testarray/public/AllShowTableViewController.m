@@ -32,13 +32,9 @@
     ///HouseModel *house = [[HouseModel alloc]init];
     
     self.showArray = [[HouseModel findAll] mutableCopy];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.sendButton];
-    [self.tableView registerNib:[UINib nibWithNibName:@"AllShowTableViewController" bundle:nil] forCellReuseIdentifier:@"showtable"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"AllShowTableViewController" bundle:nil] forCellReuseIdentifier:@"showtable"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,10 +56,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AllShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
-    
-    cell.house = self.showArray[indexPath.row];
-    
+    //AllShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable" forIndexPath:indexPath];
+    //cell.house = self.showArray[indexPath.row];
+
     return cell;
 }
 

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StudyAbroadViewTabBarController.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,8 +21,25 @@
     
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    StudyAbroadViewTabBarController *tab = [[StudyAbroadViewTabBarController alloc]init];
-    self.window.rootViewController = tab;
+    
+    NSUserDefaults *user = [[NSUserDefaults alloc]init];
+    
+    BOOL isLogin = [user boolForKey:@"isLogin"];
+    
+    if (isLogin) {
+        StudyAbroadViewTabBarController *tab = [[StudyAbroadViewTabBarController alloc]init];
+        self.window.rootViewController = tab;
+        
+    } else {
+        
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
+        
+        ViewController *vc = [story instantiateViewControllerWithIdentifier:@"hhhh"];
+        //ViewController *view = [[ViewController alloc]init];
+        self.window.rootViewController = vc;
+        
+    }
+    
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;

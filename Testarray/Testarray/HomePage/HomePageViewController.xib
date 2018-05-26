@@ -30,6 +30,9 @@
                     <state key="normal" title="物品交易">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="wupinPush:" destination="-1" eventType="touchUpInside" id="dQ0-jb-XHK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-a2-lkM">
                     <rect key="frame" x="20" y="340" width="150" height="100"/>
@@ -41,6 +44,9 @@
                     <state key="normal" title="学习">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="studyPush:" destination="-1" eventType="touchUpInside" id="zrA-b8-cLG"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-4Z-ucC">
                     <rect key="frame" x="20" y="180" width="150" height="100"/>
