@@ -12,6 +12,7 @@
 #import "MeViewController.h"
 #import "MessageViewController.h"
 #import "NearbyViewController.h"
+#import "HomeTableViewController.h"
 @interface StudyAbroadViewTabBarController ()
 
 @end
@@ -24,7 +25,7 @@
     
     [self setupChildVc:[[HomePageViewController alloc]init] title:@"首页" image:@"homepage" seleimage:nil];
     [self setupChildVc:[[NearbyViewController alloc]init] title:@"附近" image:@"bearby" seleimage:nil];
-    [self setupChildVc:[[MessageViewController alloc]init] title:@"消息" image:@"message" seleimage:nil];
+    [self setupChildVc:[[HomeTableViewController alloc]init] title:@"消息" image:@"message" seleimage:nil];
     [self setupChildVc:[[MeViewController alloc]init] title:@"我" image:@"me" seleimage:nil];
 }
 

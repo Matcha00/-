@@ -10,5 +10,5 @@
 
 @interface RegisterViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
-
+@property (nonatomic, assign) BOOL isEdit;
 @end

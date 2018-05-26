@@ -206,6 +206,9 @@
         default:
             break;
     }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
 //    HouseModel *house = [[HouseModel alloc]init];
 //
 //

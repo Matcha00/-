@@ -10,6 +10,9 @@
 #import "TZImagePickerController.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "RegisterViewController.h"
+#import "EditViewController.h"
+#import "MeCollectTableViewController.h"
 @interface MeViewController () <TZImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *headerImage;
 
@@ -30,8 +33,19 @@
     [self goTZImagePickerController];
 }
 - (IBAction)likeClic:(id)sender {
+    
+    MeCollectTableViewController *vc = [[MeCollectTableViewController alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)personMessageClick:(id)sender {
+    
+    EditViewController *vc = [[EditViewController alloc]init];
+   
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
 }
 - (IBAction)logoutClick:(id)sender {
     
@@ -44,7 +58,7 @@
         [userDe removeObjectForKey:@"id"];
         [userDe setBool:NO forKey:@"isLogin"];
         [userDe synchronize];
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
         
         ViewController *vc = [story instantiateViewControllerWithIdentifier:@"hhhh"];
         
@@ -96,4 +110,6 @@
     
     
 }
+
+
 @end
