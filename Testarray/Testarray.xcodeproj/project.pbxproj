@@ -20,6 +20,11 @@
 		1843456820B70364004ECBCE /* AllShowPushTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456620B70364004ECBCE /* AllShowPushTableViewCell.m */; };
 		1843456920B70364004ECBCE /* AllShowPushTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843456720B70364004ECBCE /* AllShowPushTableViewCell.xib */; };
 		1843456C20B70602004ECBCE /* CHCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456B20B70602004ECBCE /* CHCommentModel.m */; };
+		1843457020B87123004ECBCE /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843456E20B87123004ECBCE /* EditViewController.m */; };
+		1843457120B87123004ECBCE /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843456F20B87123004ECBCE /* EditViewController.xib */; };
+		1843457420B9241D004ECBCE /* CHCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843457320B9241D004ECBCE /* CHCollectModel.m */; };
+		1843457820B926E8004ECBCE /* MeCollectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843457620B926E8004ECBCE /* MeCollectTableViewController.m */; };
+		1843457920B926E8004ECBCE /* MeCollectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1843457720B926E8004ECBCE /* MeCollectTableViewController.xib */; };
 		185AECC520B15A33001A40EC /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AECC320B15A33001A40EC /* ShowViewController.m */; };
 		185AECC620B15A33001A40EC /* ShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AECC420B15A33001A40EC /* ShowViewController.xib */; };
 		185AECE920B168BB001A40EC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 185AECC820B168BB001A40EC /* LICENSE */; };
@@ -246,6 +251,14 @@
 		1843456720B70364004ECBCE /* AllShowPushTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllShowPushTableViewCell.xib; sourceTree = "<group>"; };
 		1843456A20B70602004ECBCE /* CHCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCommentModel.h; sourceTree = "<group>"; };
 		1843456B20B70602004ECBCE /* CHCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCommentModel.m; sourceTree = "<group>"; };
+		1843456D20B87123004ECBCE /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		1843456E20B87123004ECBCE /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		1843456F20B87123004ECBCE /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		1843457220B9241D004ECBCE /* CHCollectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCollectModel.h; sourceTree = "<group>"; };
+		1843457320B9241D004ECBCE /* CHCollectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCollectModel.m; sourceTree = "<group>"; };
+		1843457520B926E8004ECBCE /* MeCollectTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectTableViewController.h; sourceTree = "<group>"; };
+		1843457620B926E8004ECBCE /* MeCollectTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectTableViewController.m; sourceTree = "<group>"; };
+		1843457720B926E8004ECBCE /* MeCollectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectTableViewController.xib; sourceTree = "<group>"; };
 		185AECC220B15A33001A40EC /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		185AECC320B15A33001A40EC /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		185AECC420B15A33001A40EC /* ShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowViewController.xib; sourceTree = "<group>"; };
@@ -695,6 +708,8 @@
 				7C42061720B5005800EC89E2 /* CHPartTimeJobModel.m */,
 				1843456A20B70602004ECBCE /* CHCommentModel.h */,
 				1843456B20B70602004ECBCE /* CHCommentModel.m */,
+				1843457220B9241D004ECBCE /* CHCollectModel.h */,
+				1843457320B9241D004ECBCE /* CHCollectModel.m */,
 			);
 			path = Testarray;
 			sourceTree = "<group>";
@@ -821,6 +836,12 @@
 				188F4A7720B1112300C11E45 /* MeViewController.h */,
 				188F4A7820B1112300C11E45 /* MeViewController.m */,
 				188F4A7920B1112300C11E45 /* MeViewController.xib */,
+				1843456D20B87123004ECBCE /* EditViewController.h */,
+				1843456E20B87123004ECBCE /* EditViewController.m */,
+				1843456F20B87123004ECBCE /* EditViewController.xib */,
+				1843457520B926E8004ECBCE /* MeCollectTableViewController.h */,
+				1843457620B926E8004ECBCE /* MeCollectTableViewController.m */,
+				1843457720B926E8004ECBCE /* MeCollectTableViewController.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1615,12 +1636,14 @@
 				7C4206EB20B80FFE00EC89E2 /* DetailMessage.json in Resources */,
 				185AECF920B168BB001A40EC /* README.md in Resources */,
 				7C42062720B53BD800EC89E2 /* AllShowPushViewController.xib in Resources */,
+				1843457120B87123004ECBCE /* EditViewController.xib in Resources */,
 				7C4206D220B80FAE00EC89E2 /* MessageCell.xib in Resources */,
 				7C42061D20B522E500EC89E2 /* AllshowCollectionViewCell.xib in Resources */,
 				188F4A6420B0855D00C11E45 /* school.jpeg in Resources */,
 				7C4206DB20B80FAE00EC89E2 /* MeCell.xib in Resources */,
 				188F4A5620B00CC400C11E45 /* Info.plist in Resources */,
 				7C42081E20B8114A00EC89E2 /* README.md in Resources */,
+				1843457920B926E8004ECBCE /* MeCollectTableViewController.xib in Resources */,
 				181BC71A20ADA31600230A9B /* Main1.storyboard in Resources */,
 				7C42085520B8114A00EC89E2 /* README.md in Resources */,
 				7C42081320B8114A00EC89E2 /* LICENSE in Resources */,
@@ -1707,6 +1730,7 @@
 				7CE323F820B2637B00731F9A /* SVIndefiniteAnimatedView.m in Sources */,
 				7C42080F20B8114A00EC89E2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				7C4206C420B80FAE00EC89E2 /* CircleItem.m in Sources */,
+				1843457420B9241D004ECBCE /* CHCollectModel.m in Sources */,
 				7C42082320B8114A00EC89E2 /* MJRefreshFooter.m in Sources */,
 				7C42084C20B8114A00EC89E2 /* UIImage+MultiFormat.m in Sources */,
 				7C42084A20B8114A00EC89E2 /* UIImage+ForceDecode.m in Sources */,
@@ -1715,8 +1739,10 @@
 				7C42084F20B8114A00EC89E2 /* UIView+WebCache.m in Sources */,
 				7C4206B920B80FAE00EC89E2 /* BaseViewModel.m in Sources */,
 				7C4206D120B80FAE00EC89E2 /* MessageCell.m in Sources */,
+				1843457020B87123004ECBCE /* EditViewController.m in Sources */,
 				7C4206BF20B80FAE00EC89E2 /* SearchDefaultCell.m in Sources */,
 				7C4206C220B80FAE00EC89E2 /* FindTableViewController.m in Sources */,
+				1843457820B926E8004ECBCE /* MeCollectTableViewController.m in Sources */,
 				185AECF820B168BB001A40EC /* TZGifPhotoPreviewController.m in Sources */,
 				181BC72220ADA31A00230A9B /* main.m in Sources */,
 				7C42060C20B4F8F100EC89E2 /* CHConst.m in Sources */,

@@ -144,6 +144,26 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.nearbyTableView reloadData];
+    switch (self.changType.selectedSegmentIndex) {
+        case 0:
+        {
+            self.showarray = [[CHInternshipModel findAll]mutableCopy];
+            //self.type = sem.selectedSegmentIndex;
+            [self.nearbyTableView reloadData];
+        }
+            
+            break;
+        case 1: {
+            self.showarray = [[CHPartTimeJobModel findAll]mutableCopy];
+            //self.type = sem.selectedSegmentIndex;
+            [self.nearbyTableView reloadData];
+        }
+            
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 @end

@@ -9,6 +9,7 @@
 #import "AllShowTableViewCell.h"
 #import "HouseModel.h"
 #import "AllshowCollectionViewCell.h"
+#import "CHCollectModel.h"
 @interface AllShowTableViewCell() <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -42,6 +43,16 @@
     
 }
 
+- (IBAction)sc:(id)sender {
+    
+    CHCollectModel *colletcModel = [[CHCollectModel alloc]init];
+    
+    colletcModel.messageHouse = self.house.messageHouse;
+    colletcModel.imageData = self.house.imageData;
+    [colletcModel save];
+    
+    
+}
 
 
 #pragma mark privte uicollectionview

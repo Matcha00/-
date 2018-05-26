@@ -19,6 +19,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="528" height="369.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="159"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-Wk-2hq">
+                        <rect key="frame" x="468" y="40" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="RUH-hp-sIR"/>
+                            <constraint firstAttribute="height" constant="40" id="p9L-Tm-B8Y"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="sc"/>
+                        <connections>
+                            <action selector="sc:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kah-sB-njh"/>
+                        </connections>
+                    </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-zS-yZw">
                         <rect key="frame" x="0.0" y="169" width="528" height="200"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,12 +50,6 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-WE-Bat">
-                        <rect key="frame" x="0.0" y="0.0" width="528" height="159"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9Yd-zS-yZw" firstAttribute="top" secondItem="5iV-WE-Bat" secondAttribute="bottom" constant="10" id="QYH-wB-ZJv"/>
@@ -48,6 +59,8 @@
                     <constraint firstAttribute="trailing" secondItem="9Yd-zS-yZw" secondAttribute="trailing" id="eLt-u5-kqs"/>
                     <constraint firstItem="9Yd-zS-yZw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="edd-pm-ues"/>
                     <constraint firstAttribute="bottom" secondItem="9Yd-zS-yZw" secondAttribute="bottom" id="hBm-Xa-uDQ"/>
+                    <constraint firstItem="vIk-Wk-2hq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="kdM-xt-SDc"/>
+                    <constraint firstAttribute="trailing" secondItem="vIk-Wk-2hq" secondAttribute="trailing" constant="20" id="unz-j6-Lwf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -58,4 +71,7 @@
             <point key="canvasLocation" x="-41" y="-1"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="sc" width="64" height="64"/>
+    </resources>
 </document>
