@@ -32,6 +32,7 @@
                             <constraint firstAttribute="height" constant="40" id="p9L-Tm-B8Y"/>
                         </constraints>
                         <state key="normal" title="Button" image="sc"/>
+                        <state key="selected" image="sc_s"/>
                         <connections>
                             <action selector="sc:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kah-sB-njh"/>
                         </connections>
@@ -66,6 +67,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="imageShow" destination="9Yd-zS-yZw" id="v8y-0f-oGb"/>
+                <outlet property="scButton" destination="vIk-Wk-2hq" id="xzA-mj-mOz"/>
                 <outlet property="zhengwen" destination="5iV-WE-Bat" id="1Ui-b7-7WB"/>
             </connections>
             <point key="canvasLocation" x="-41" y="-1"/>
@@ -73,5 +75,6 @@
     </objects>
     <resources>
         <image name="sc" width="64" height="64"/>
+        <image name="sc_s" width="64" height="64"/>
     </resources>
 </document>

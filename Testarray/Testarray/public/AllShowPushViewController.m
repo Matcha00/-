@@ -128,7 +128,7 @@
     
     comment.mesageText = textField.text;
     
-    [comment save];
+    //[comment save];
     if ([textField.text isEqualToString:@""]) {
         return NO;
     }

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
 @property (nonatomic, strong) NSMutableArray *imageArray;
 @property (weak, nonatomic) IBOutlet UILabel *zhengwen;
+@property (weak, nonatomic) IBOutlet UIButton *scButton;
 
 @end
 @implementation AllShowTableViewCell
@@ -46,7 +47,7 @@
 - (IBAction)sc:(id)sender {
     
     CHCollectModel *colletcModel = [[CHCollectModel alloc]init];
-    
+    self.scButton.selected = YES;
     colletcModel.messageHouse = self.house.messageHouse;
     colletcModel.imageData = self.house.imageData;
     [colletcModel save];

@@ -81,7 +81,7 @@
     UserInfo *userInfo = [[UserInfo alloc]init];
     
     userInfo.name =self.name.text;
-   userInfo.birthday = self.sr.text ;
+    userInfo.birthday = self.sr.text ;
     userInfo.countyr =self.gj.text  ;
     userInfo.school = self.xx.text  ;
     userInfo.number =self.xh.text  ;
