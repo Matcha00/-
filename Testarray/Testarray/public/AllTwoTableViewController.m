@@ -171,6 +171,13 @@
 {
     UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         NSLog(@"pppppppp");
+        // 首先改变model
+        [self.showArray removeObjectAtIndex:indexPath.row];
+        // 接着刷新view
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        // 不需要主动退出编辑模式，上面更新view的操作完成后就会自动退出编辑模式
+        
+        
 //        switch (self.type) {
 //            case CHTypeAllHouse:
 //            {
@@ -199,7 +206,12 @@
         
     }];
     deleteRowAction.backgroundColor = [UIColor redColor];
-    return @[deleteRowAction];
+    
+    UITableViewRowAction *like = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+    }];
+    
+    return @[deleteRowAction,like];
 }
 
 /*
