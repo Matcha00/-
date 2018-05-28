@@ -14,5 +14,6 @@ typedef NS_ENUM(NSInteger , CHTypeAll) {
     CHTypeAllStudy,
     CHTypeAllWPShop,
     CHTypeAllJZ,
-    CHTypeAllSX
+    CHTypeAllSX,
+    CHTypeAllTour
 };

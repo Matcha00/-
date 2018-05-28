@@ -13,6 +13,7 @@
 #import "CHPartTimeJobModel.h"
 #import "CHConst.h"
 #import "AllShowPushViewController.h"
+#import "CHTourModel.h"
 @interface NearbyViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *nearbyTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *changType;
@@ -110,8 +111,11 @@
     
     if (self.type == 0) {
         show.type = CHTypeAllSX;
-    } else {
+    } else if (self.type == 1){
         show.type = CHTypeAllJZ;
+    } else {
+        
+        show.type = CHTypeAllTour;
     }
     //
     [self.navigationController pushViewController:show animated:YES];
@@ -134,6 +138,13 @@
         }
             
             
+            break;
+        case 2:
+        {
+            self.showarray = [[CHTourModel findAll]mutableCopy];
+            self.type = sem.selectedSegmentIndex;
+            [self.nearbyTableView reloadData];
+        }
             break;
             
         default:
@@ -160,6 +171,14 @@
         }
             
             
+            break;
+            
+        case 2:
+        {
+            self.showarray = [[CHTourModel findAll]mutableCopy];
+            //self.type = sem.selectedSegmentIndex;
+            [self.nearbyTableView reloadData];
+        }
             break;
             
         default:

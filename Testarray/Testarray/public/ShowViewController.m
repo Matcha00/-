@@ -15,6 +15,7 @@
 #import "CHResModel.h"
 #import "CHInternshipModel.h"
 #import "CHPartTimeJobModel.h"
+#import "CHTourModel.h"
 @interface ShowViewController () <UICollectionViewDelegate,UICollectionViewDataSource,TZImagePickerControllerDelegate>
 //@property (weak, nonatomic) IBOutlet UITextView *sendMessage;
 @property (weak, nonatomic) IBOutlet CHTextView *sendMessage;
@@ -200,6 +201,15 @@
             resModel.userName = getUsername;
             [resModel save];
             
+        }
+            break;
+        case CHTypeAllTour:
+        {
+            CHTourModel *tour = [[CHTourModel alloc]init];
+            tour.messageHouse = text;
+            tour.imageData = pictStr;
+            tour.userName = getUsername;
+            [tour save];
         }
             break;
             
