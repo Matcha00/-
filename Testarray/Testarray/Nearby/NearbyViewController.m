@@ -94,6 +94,7 @@
 {
     AllShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showtable"];
     cell.house = self.showarray[indexPath.row];
+    [cell reloadImage];
     return cell;
 }
 

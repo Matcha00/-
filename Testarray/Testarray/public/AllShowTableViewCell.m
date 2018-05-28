@@ -78,4 +78,8 @@
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
+- (void)reloadImage
+{
+    [self.imageShow reloadData];
+}
 @end

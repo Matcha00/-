@@ -10,6 +10,6 @@
 @class CHTableviewModel;
 @interface AllShowTableViewCell : UITableViewCell
 @property (nonatomic, strong) CHTableviewModel *house;
-
+- (void)reloadImage;
 + (instancetype)cell;
 @end
