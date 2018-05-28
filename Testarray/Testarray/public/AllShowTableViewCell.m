@@ -10,6 +10,7 @@
 #import "HouseModel.h"
 #import "AllshowCollectionViewCell.h"
 #import "CHCollectModel.h"
+#import "CHTableviewModel.h"
 @interface AllShowTableViewCell() <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *imageShow;
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -35,7 +36,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setHouse:(HouseModel *)house
+- (void)setHouse:(CHTableviewModel *)house
 {
     _house = house;
     

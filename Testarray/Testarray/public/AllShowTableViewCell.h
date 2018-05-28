@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class HouseModel;
+@class CHTableviewModel;
 @interface AllShowTableViewCell : UITableViewCell
-@property (nonatomic, copy) HouseModel *house;
+@property (nonatomic, strong) CHTableviewModel *house;
 
 + (instancetype)cell;
 @end

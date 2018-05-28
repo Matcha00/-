@@ -15,7 +15,8 @@
 #import "AllShowTableViewCell.h"
 #import "ShowViewController.h"
 #import "AllShowPushViewController.h"
-
+#import "CHTableviewModel.h"
+#import "CHTableviewModel.h"
 @interface AllTwoTableViewController ()
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, strong) NSMutableArray *showArray;
@@ -155,6 +156,51 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    CHTableviewModel *model = self.showArray[indexPath.row];
+//    return model.cellHeight;
+//}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        NSLog(@"pppppppp");
+//        switch (self.type) {
+//            case CHTypeAllHouse:
+//            {
+//                HouseModel *model = self.showArray[indexPath.row];
+//                [model deleteObject];
+//            }
+//                break;
+//            case CHTypeAllStudy:
+//            {
+//                CHStudyModel *model = self.showArray[indexPath.row];
+//                [model deleteObject];
+//            }
+//
+//                break;
+//            case CHTypeAllWPShop:
+//            {
+//                CHResModel *model = self.showArray[indexPath.row];
+//                [model deleteObject];
+//            }
+//                break;
+//
+//            default:
+//                break;
+//        }
+        
+        
+    }];
+    deleteRowAction.backgroundColor = [UIColor redColor];
+    return @[deleteRowAction];
+}
 
 /*
 #pragma mark - Navigation

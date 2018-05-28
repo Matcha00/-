@@ -71,6 +71,7 @@
 		188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A8220B111AE00C11E45 /* MessageViewController.m */; };
 		188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A8320B111AE00C11E45 /* MessageViewController.xib */; };
 		7C2DF5BE20BBCDB60024BDCC /* CHTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */; };
+		7C2DF5C120BBD0AC0024BDCC /* CHTableviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */; };
 		7C42060220B3AD3900EC89E2 /* AllShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */; };
 		7C42060720B3AD5300EC89E2 /* AllShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060520B3AD5300EC89E2 /* AllShowTableViewCell.m */; };
 		7C42060820B3AD5300EC89E2 /* AllShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C42060620B3AD5300EC89E2 /* AllShowTableViewCell.xib */; };
@@ -341,6 +342,8 @@
 		188F4A8320B111AE00C11E45 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		7C2DF5BC20BBCDB60024BDCC /* CHTourModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTourModel.h; sourceTree = "<group>"; };
 		7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTourModel.m; sourceTree = "<group>"; };
+		7C2DF5BF20BBD0AC0024BDCC /* CHTableviewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTableviewModel.h; sourceTree = "<group>"; };
+		7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTableviewModel.m; sourceTree = "<group>"; };
 		7C4205FF20B3AD3900EC89E2 /* AllShowTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllShowTableViewController.h; sourceTree = "<group>"; };
 		7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllShowTableViewController.m; sourceTree = "<group>"; };
 		7C42060420B3AD5300EC89E2 /* AllShowTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllShowTableViewCell.h; sourceTree = "<group>"; };
@@ -646,6 +649,8 @@
 		181BC70620ADA31600230A9B = {
 			isa = PBXGroup;
 			children = (
+				7C2DF5BF20BBD0AC0024BDCC /* CHTableviewModel.h */,
+				7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */,
 				181BC71120ADA31600230A9B /* Testarray */,
 				181BC71020ADA31600230A9B /* Products */,
 			);
@@ -1760,6 +1765,7 @@
 				7C4206CD20B80FAE00EC89E2 /* FriendCircleViewModel.m in Sources */,
 				7C4206C820B80FAE00EC89E2 /* FindCell.m in Sources */,
 				7C42083B20B8114A00EC89E2 /* SDImageCache.m in Sources */,
+				7C2DF5C120BBD0AC0024BDCC /* CHTableviewModel.m in Sources */,
 				7C2DF5BE20BBCDB60024BDCC /* CHTourModel.m in Sources */,
 				188F4A7120B10A6400C11E45 /* StudyAbroadNavigationController.m in Sources */,
 				185AECFC20B2F65E001A40EC /* CHTextView.m in Sources */,

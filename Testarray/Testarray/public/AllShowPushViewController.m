@@ -14,6 +14,7 @@
 #import "AllShowPushTableViewCell.h"
 #import "CHCommentModel.h"
 #import "UIView+CHExtension.h"
+
 @interface AllShowPushViewController () <UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *commentTextField;
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
