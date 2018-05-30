@@ -17,6 +17,7 @@
 #import "AllShowPushViewController.h"
 #import "CHTableviewModel.h"
 #import "CHTableviewModel.h"
+#import "CHCollectModel.h"
 @interface AllTwoTableViewController ()
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, strong) NSMutableArray *showArray;
@@ -172,6 +173,50 @@
     UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         NSLog(@"pppppppp");
         // 首先改变model
+        switch (self.type) {
+            case CHTypeAllHouse:
+            {
+                HouseModel *house = self.showArray[indexPath.row];
+                [house deleteObject];
+            }
+                break;
+            case CHTypeAllSX:
+            {
+                CHInternshipModel *sxModel = self.showArray[indexPath.row];
+                [sxModel deleteObject];
+               
+            }
+                
+                break;
+            case CHTypeAllJZ:
+            {
+                CHPartTimeJobModel *jzModel = self.showArray[indexPath.row];
+                [jzModel deleteObject];
+                
+            }
+                break;
+            case CHTypeAllStudy:
+            {
+                CHStudyModel *studyModel = self.showArray[indexPath.row];
+                [studyModel deleteObject];
+                
+            }
+                break;
+            case CHTypeAllWPShop:
+            {
+                CHResModel *resModel = self.showArray[indexPath.row];
+                [resModel deleteObject];
+               
+                
+            }
+                break;
+            
+                
+            default:
+                break;
+        }
+        
+        
         [self.showArray removeObjectAtIndex:indexPath.row];
         // 接着刷新view
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -208,6 +253,12 @@
     deleteRowAction.backgroundColor = [UIColor redColor];
     
     UITableViewRowAction *like = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        CHTableviewModel *mo = self.showArray[indexPath.row];
+        CHCollectModel *colletcModel = [[CHCollectModel alloc]init];
+        //self.scButton.selected = YES;
+        colletcModel.messageHouse = mo.messageHouse;
+        colletcModel.imageData = mo.imageData;
+        [colletcModel save];
         
     }];
     

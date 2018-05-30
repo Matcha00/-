@@ -70,6 +70,9 @@
 		188F4A8020B1119A00C11E45 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A7E20B1119A00C11E45 /* NearbyViewController.xib */; };
 		188F4A8420B111AE00C11E45 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4A8220B111AE00C11E45 /* MessageViewController.m */; };
 		188F4A8520B111AE00C11E45 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4A8320B111AE00C11E45 /* MessageViewController.xib */; };
+		18D9D57120BEDAE300BAEA28 /* CustomLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18D9D57320BEDAE300BAEA28 /* CustomLocalizable.strings */; };
+		18D9D58020BEF42500BAEA28 /* AppLocalizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9D57D20BEF42500BAEA28 /* AppLocalizable.m */; };
+		18D9D58120BEF42500BAEA28 /* SwitchLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9D57F20BEF42500BAEA28 /* SwitchLanguageController.m */; };
 		7C2DF5BE20BBCDB60024BDCC /* CHTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */; };
 		7C2DF5C120BBD0AC0024BDCC /* CHTableviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */; };
 		7C42060220B3AD3900EC89E2 /* AllShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */; };
@@ -340,6 +343,18 @@
 		188F4A8120B111AE00C11E45 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		188F4A8220B111AE00C11E45 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		188F4A8320B111AE00C11E45 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		18D9D57220BEDAE300BAEA28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CustomLocalizable.strings; sourceTree = "<group>"; };
+		18D9D57420BEDBB100BAEA28 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main1.strings"; sourceTree = "<group>"; };
+		18D9D57520BEDBB100BAEA28 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18D9D57620BEDBB100BAEA28 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CustomLocalizable.strings"; sourceTree = "<group>"; };
+		18D9D57720BEDBC900BAEA28 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main1.strings"; sourceTree = "<group>"; };
+		18D9D57820BEDBC900BAEA28 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18D9D57920BEDBC900BAEA28 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CustomLocalizable.strings"; sourceTree = "<group>"; };
+		18D9D57B20BEF42500BAEA28 /* AppLocalizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLocalizable.h; sourceTree = "<group>"; };
+		18D9D57C20BEF42500BAEA28 /* SwitchLanguageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchLanguageController.h; sourceTree = "<group>"; };
+		18D9D57D20BEF42500BAEA28 /* AppLocalizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLocalizable.m; sourceTree = "<group>"; };
+		18D9D57E20BEF42500BAEA28 /* AppLocalizableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLocalizableHeader.h; sourceTree = "<group>"; };
+		18D9D57F20BEF42500BAEA28 /* SwitchLanguageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLanguageController.m; sourceTree = "<group>"; };
 		7C2DF5BC20BBCDB60024BDCC /* CHTourModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTourModel.h; sourceTree = "<group>"; };
 		7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTourModel.m; sourceTree = "<group>"; };
 		7C2DF5BF20BBD0AC0024BDCC /* CHTableviewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTableviewModel.h; sourceTree = "<group>"; };
@@ -649,6 +664,7 @@
 		181BC70620ADA31600230A9B = {
 			isa = PBXGroup;
 			children = (
+				18D9D57320BEDAE300BAEA28 /* CustomLocalizable.strings */,
 				7C2DF5BF20BBD0AC0024BDCC /* CHTableviewModel.h */,
 				7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */,
 				181BC71120ADA31600230A9B /* Testarray */,
@@ -727,6 +743,7 @@
 		185AECBE20B13AA1001A40EC /* public */ = {
 			isa = PBXGroup;
 			children = (
+				18D9D57A20BEF42500BAEA28 /* AppLocalizable */,
 				7C42060420B3AD5300EC89E2 /* AllShowTableViewCell.h */,
 				7C42060520B3AD5300EC89E2 /* AllShowTableViewCell.m */,
 				7C42060620B3AD5300EC89E2 /* AllShowTableViewCell.xib */,
@@ -874,6 +891,18 @@
 				188F4A7E20B1119A00C11E45 /* NearbyViewController.xib */,
 			);
 			path = Nearby;
+			sourceTree = "<group>";
+		};
+		18D9D57A20BEF42500BAEA28 /* AppLocalizable */ = {
+			isa = PBXGroup;
+			children = (
+				18D9D57B20BEF42500BAEA28 /* AppLocalizable.h */,
+				18D9D57C20BEF42500BAEA28 /* SwitchLanguageController.h */,
+				18D9D57D20BEF42500BAEA28 /* AppLocalizable.m */,
+				18D9D57E20BEF42500BAEA28 /* AppLocalizableHeader.h */,
+				18D9D57F20BEF42500BAEA28 /* SwitchLanguageController.m */,
+			);
+			path = AppLocalizable;
 			sourceTree = "<group>";
 		};
 		7C42064D20B80FAE00EC89E2 /* Main */ = {
@@ -1606,6 +1635,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 181BC70620ADA31600230A9B;
 			productRefGroup = 181BC71020ADA31600230A9B /* Products */;
@@ -1676,6 +1707,7 @@
 				185AECF120B168BB001A40EC /* TZImagePickerController.bundle in Resources */,
 				188F4A7620B1110600C11E45 /* HomePageViewController.xib in Resources */,
 				7C42081220B8114A00EC89E2 /* README.md in Resources */,
+				18D9D57120BEDAE300BAEA28 /* CustomLocalizable.strings in Resources */,
 				188F4A6B20B08B5500C11E45 /* login.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1697,6 +1729,7 @@
 				7C4206B420B80FAE00EC89E2 /* BaseViewController.m in Sources */,
 				188F4A6E20B10A2300C11E45 /* StudyAbroadViewTabBarController.m in Sources */,
 				7C42083920B8114A00EC89E2 /* NSImage+WebCache.m in Sources */,
+				18D9D58120BEF42500BAEA28 /* SwitchLanguageController.m in Sources */,
 				7C42080B20B8114A00EC89E2 /* MASLayoutConstraint.m in Sources */,
 				188F4A5120B00CC400C11E45 /* FMDatabaseQueue.m in Sources */,
 				7C42083720B8114A00EC89E2 /* NSButton+WebCache.m in Sources */,
@@ -1741,6 +1774,7 @@
 				7C42080F20B8114A00EC89E2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				7C4206C420B80FAE00EC89E2 /* CircleItem.m in Sources */,
 				1843457420B9241D004ECBCE /* CHCollectModel.m in Sources */,
+				18D9D58020BEF42500BAEA28 /* AppLocalizable.m in Sources */,
 				7C42082320B8114A00EC89E2 /* MJRefreshFooter.m in Sources */,
 				7C42084C20B8114A00EC89E2 /* UIImage+MultiFormat.m in Sources */,
 				7C42084A20B8114A00EC89E2 /* UIImage+ForceDecode.m in Sources */,
@@ -1864,6 +1898,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				181BC71920ADA31600230A9B /* Base */,
+				18D9D57420BEDBB100BAEA28 /* zh-Hans */,
+				18D9D57720BEDBC900BAEA28 /* zh-Hant */,
 			);
 			name = Main1.storyboard;
 			sourceTree = "<group>";
@@ -1872,8 +1908,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				181BC71E20ADA31A00230A9B /* Base */,
+				18D9D57520BEDBB100BAEA28 /* zh-Hans */,
+				18D9D57820BEDBC900BAEA28 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18D9D57320BEDAE300BAEA28 /* CustomLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D9D57220BEDAE300BAEA28 /* en */,
+				18D9D57620BEDBB100BAEA28 /* zh-Hans */,
+				18D9D57920BEDBC900BAEA28 /* zh-Hant */,
+			);
+			name = CustomLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1883,6 +1931,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1941,6 +1990,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
