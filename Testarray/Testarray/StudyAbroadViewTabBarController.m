@@ -13,6 +13,7 @@
 #import "MessageViewController.h"
 #import "NearbyViewController.h"
 #import "HomeTableViewController.h"
+#import "MeStoryTableViewController.h"
 @interface StudyAbroadViewTabBarController ()
 
 @end
@@ -22,11 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"me" bundle:nil];
+    MeStoryTableViewController *meVc = [story instantiateViewControllerWithIdentifier:@"me"];
     [self setupChildVc:[[HomePageViewController alloc]init] title:@"首页" image:@"homepage" seleimage:nil];
     [self setupChildVc:[[NearbyViewController alloc]init] title:@"附近" image:@"bearby" seleimage:nil];
     [self setupChildVc:[[HomeTableViewController alloc]init] title:@"消息" image:@"message" seleimage:nil];
-    [self setupChildVc:[[MeViewController alloc]init] title:@"我" image:@"me" seleimage:nil];
+    [self setupChildVc:meVc title:@"我" image:@"me" seleimage:nil];
 }
 
 - (void)didReceiveMemoryWarning {

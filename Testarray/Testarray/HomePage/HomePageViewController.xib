@@ -20,59 +20,76 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7J-Ea-PC6">
-                    <rect key="frame" x="205" y="180" width="150" height="100"/>
-                    <color key="backgroundColor" red="0.96097940209999999" green="0.18430359200862192" blue="0.39711651462614267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-a2-lkM" customClass="CHIamgeUp">
+                    <rect key="frame" x="138" y="410" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="1AL-hg-3u4"/>
-                        <constraint firstAttribute="height" constant="100" id="FqQ-oy-qtI"/>
+                        <constraint firstAttribute="width" constant="100" id="Nig-hw-VbA"/>
+                        <constraint firstAttribute="height" constant="100" id="VIv-z6-GJT"/>
                     </constraints>
-                    <state key="normal" title="物品交易">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="wupinPush:" destination="-1" eventType="touchUpInside" id="dQ0-jb-XHK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-a2-lkM">
-                    <rect key="frame" x="20" y="340" width="150" height="100"/>
-                    <color key="backgroundColor" red="0.96097940209999999" green="0.18430359200862192" blue="0.39711651462614267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="IgG-hC-SLs"/>
-                        <constraint firstAttribute="width" constant="150" id="QFT-R7-GZX"/>
-                    </constraints>
-                    <state key="normal" title="学习">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="学习" image="2">
+                        <color key="titleColor" red="0.333293438" green="0.33335629109999998" blue="0.33328947419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="studyPush:" destination="-1" eventType="touchUpInside" id="zrA-b8-cLG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-4Z-ucC">
-                    <rect key="frame" x="20" y="180" width="150" height="100"/>
-                    <color key="backgroundColor" red="0.96097940209999999" green="0.18430359200862192" blue="0.39711651462614267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-4Z-ucC" customClass="CHIamgeUp">
+                    <rect key="frame" x="16" y="410" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="7iJ-lm-18Y"/>
-                        <constraint firstAttribute="width" constant="150" id="Q3p-i1-Zf4"/>
+                        <constraint firstAttribute="width" constant="100" id="jME-oL-NvS"/>
+                        <constraint firstAttribute="height" constant="100" id="tXc-lR-Dbm"/>
                     </constraints>
-                    <state key="normal" title="住房信息">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="房屋租赁" image="1">
+                        <color key="titleColor" red="0.333293438" green="0.33335629109999998" blue="0.33328947419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="fzClick:" destination="-1" eventType="touchUpInside" id="sj4-0a-I5O"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h" translatesAutoresizingMaskIntoConstraints="NO" id="rTo-lC-WjU">
+                    <rect key="frame" x="0.0" y="60" width="375" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="USY-zn-hVa"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7J-Ea-PC6" customClass="CHIamgeUp">
+                    <rect key="frame" x="259" y="409" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="9yK-hz-O2e"/>
+                        <constraint firstAttribute="height" constant="100" id="Yb3-g0-5mp"/>
+                    </constraints>
+                    <state key="normal" title="物品交易" image="3">
+                        <color key="titleColor" red="0.333293438" green="0.33335629109999998" blue="0.33328947419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="wupinPush:" destination="-1" eventType="touchUpInside" id="dQ0-jb-XHK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2Rd-4Z-ucC" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="160" id="Bf9-DF-0Kx"/>
-                <constraint firstItem="B7J-Ea-PC6" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="160" id="bNl-se-fMm"/>
-                <constraint firstItem="znJ-a2-lkM" firstAttribute="top" secondItem="2Rd-4Z-ucC" secondAttribute="bottom" constant="60" id="eiE-CG-cPJ"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="B7J-Ea-PC6" secondAttribute="trailing" constant="20" id="fLF-fW-9j8"/>
-                <constraint firstItem="2Rd-4Z-ucC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="frW-8I-Clb"/>
-                <constraint firstItem="znJ-a2-lkM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="obZ-bI-xb6"/>
+                <constraint firstItem="znJ-a2-lkM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Xc-4Q-rUS"/>
+                <constraint firstItem="B7J-Ea-PC6" firstAttribute="top" secondItem="rTo-lC-WjU" secondAttribute="bottom" constant="100" id="5qm-hL-CGi"/>
+                <constraint firstItem="rTo-lC-WjU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Lf5-8l-Lo6"/>
+                <constraint firstItem="znJ-a2-lkM" firstAttribute="top" secondItem="rTo-lC-WjU" secondAttribute="bottom" constant="100" id="Lh7-8O-5gR"/>
+                <constraint firstItem="2Rd-4Z-ucC" firstAttribute="top" secondItem="rTo-lC-WjU" secondAttribute="bottom" constant="100" id="PRf-bu-aQ6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="B7J-Ea-PC6" secondAttribute="trailing" constant="20" id="RM8-2z-MCj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rTo-lC-WjU" secondAttribute="trailing" id="ZDe-Se-clm"/>
+                <constraint firstItem="2Rd-4Z-ucC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="d34-8Y-PT3"/>
+                <constraint firstItem="rTo-lC-WjU" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="hrq-sU-39x"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.5" y="91.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="1" width="38" height="36"/>
+        <image name="2" width="40" height="40"/>
+        <image name="3" width="40" height="40"/>
+        <image name="h" width="400" height="251"/>
+    </resources>
 </document>

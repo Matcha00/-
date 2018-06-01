@@ -73,6 +73,9 @@
 		18D9D57120BEDAE300BAEA28 /* CustomLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18D9D57320BEDAE300BAEA28 /* CustomLocalizable.strings */; };
 		18D9D58020BEF42500BAEA28 /* AppLocalizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9D57D20BEF42500BAEA28 /* AppLocalizable.m */; };
 		18D9D58120BEF42500BAEA28 /* SwitchLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9D57F20BEF42500BAEA28 /* SwitchLanguageController.m */; };
+		18E2406E20C17B4D00AB5CEC /* CHIamgeUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2406D20C17B4D00AB5CEC /* CHIamgeUp.m */; };
+		18E2407020C189F800AB5CEC /* me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E2406F20C189F800AB5CEC /* me.storyboard */; };
+		18E2407620C198C200AB5CEC /* MeStoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2407520C198C200AB5CEC /* MeStoryTableViewController.m */; };
 		7C2DF5BE20BBCDB60024BDCC /* CHTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */; };
 		7C2DF5C120BBD0AC0024BDCC /* CHTableviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DF5C020BBD0AC0024BDCC /* CHTableviewModel.m */; };
 		7C42060220B3AD3900EC89E2 /* AllShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42060020B3AD3900EC89E2 /* AllShowTableViewController.m */; };
@@ -355,6 +358,11 @@
 		18D9D57D20BEF42500BAEA28 /* AppLocalizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLocalizable.m; sourceTree = "<group>"; };
 		18D9D57E20BEF42500BAEA28 /* AppLocalizableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLocalizableHeader.h; sourceTree = "<group>"; };
 		18D9D57F20BEF42500BAEA28 /* SwitchLanguageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLanguageController.m; sourceTree = "<group>"; };
+		18E2406C20C17B4D00AB5CEC /* CHIamgeUp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHIamgeUp.h; sourceTree = "<group>"; };
+		18E2406D20C17B4D00AB5CEC /* CHIamgeUp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHIamgeUp.m; sourceTree = "<group>"; };
+		18E2406F20C189F800AB5CEC /* me.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = me.storyboard; sourceTree = "<group>"; };
+		18E2407420C198C200AB5CEC /* MeStoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeStoryTableViewController.h; sourceTree = "<group>"; };
+		18E2407520C198C200AB5CEC /* MeStoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeStoryTableViewController.m; sourceTree = "<group>"; };
 		7C2DF5BC20BBCDB60024BDCC /* CHTourModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTourModel.h; sourceTree = "<group>"; };
 		7C2DF5BD20BBCDB60024BDCC /* CHTourModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTourModel.m; sourceTree = "<group>"; };
 		7C2DF5BF20BBD0AC0024BDCC /* CHTableviewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTableviewModel.h; sourceTree = "<group>"; };
@@ -869,6 +877,9 @@
 				1843457520B926E8004ECBCE /* MeCollectTableViewController.h */,
 				1843457620B926E8004ECBCE /* MeCollectTableViewController.m */,
 				1843457720B926E8004ECBCE /* MeCollectTableViewController.xib */,
+				18E2406F20C189F800AB5CEC /* me.storyboard */,
+				18E2407420C198C200AB5CEC /* MeStoryTableViewController.h */,
+				18E2407520C198C200AB5CEC /* MeStoryTableViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1573,6 +1584,8 @@
 				7CE323ED20B2637B00731F9A /* SVProgressHUD */,
 				185AECC720B168BB001A40EC /* TZImagePickerController */,
 				188F4A4420B00CC400C11E45 /* fmdb */,
+				18E2406C20C17B4D00AB5CEC /* CHIamgeUp.h */,
+				18E2406D20C17B4D00AB5CEC /* CHIamgeUp.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -1684,6 +1697,7 @@
 				7C4206DB20B80FAE00EC89E2 /* MeCell.xib in Resources */,
 				188F4A5620B00CC400C11E45 /* Info.plist in Resources */,
 				7C42081E20B8114A00EC89E2 /* README.md in Resources */,
+				18E2407020C189F800AB5CEC /* me.storyboard in Resources */,
 				1843457920B926E8004ECBCE /* MeCollectTableViewController.xib in Resources */,
 				181BC71A20ADA31600230A9B /* Main1.storyboard in Resources */,
 				7C42085520B8114A00EC89E2 /* README.md in Resources */,
@@ -1778,6 +1792,7 @@
 				7C42082320B8114A00EC89E2 /* MJRefreshFooter.m in Sources */,
 				7C42084C20B8114A00EC89E2 /* UIImage+MultiFormat.m in Sources */,
 				7C42084A20B8114A00EC89E2 /* UIImage+ForceDecode.m in Sources */,
+				18E2406E20C17B4D00AB5CEC /* CHIamgeUp.m in Sources */,
 				185AECF420B168BB001A40EC /* TZPhotoPickerController.m in Sources */,
 				7C42084920B8114A00EC89E2 /* UIButton+WebCache.m in Sources */,
 				7C42084F20B8114A00EC89E2 /* UIView+WebCache.m in Sources */,
@@ -1834,6 +1849,7 @@
 				7C4206D320B80FAE00EC89E2 /* ReciveMsgCell.m in Sources */,
 				7C4206BA20B80FAE00EC89E2 /* ContactTableViewController.m in Sources */,
 				7C4206D520B80FAE00EC89E2 /* SendMsgCell.m in Sources */,
+				18E2407620C198C200AB5CEC /* MeStoryTableViewController.m in Sources */,
 				7C4206B220B80FAE00EC89E2 /* BaseNavigationController.m in Sources */,
 				7C42082520B8114A00EC89E2 /* MJRefreshAutoGifFooter.m in Sources */,
 				188F4A5920B00D7C00C11E45 /* CHDBTool.m in Sources */,
